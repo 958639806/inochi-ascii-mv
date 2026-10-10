@@ -8,7 +8,7 @@
 | 八镜头任务书 | DONE | docs/PILOT_TASK.md；仍待音画精校 |
 | 试片音频 | DONE | assets/audio/pilot_058-073.flac；15.000秒 |
 | 原创作说明、全曲草案、结构图 | DONE | 原文件已复制；此轮没有重新判读结构图 |
-| 私有 GitHub 建库与上传 | BLOCKED | 当前会话连接没有新建仓库操作；尚未创建远端 |
+| 私有 GitHub 建库与上传 | DONE | private=true / visibility=private；远端 main 已核验：`dc362e9d43dffd1c3d0247332c2824e26de9ae52`；https://github.com/958639806/inochi-ascii-mv |
 | 动画引擎、角色、场景 | TODO | 尚无实现 |
 | 逐句歌词与鼓点精校 | TODO | 音频能量不等于语义或鼓点标注 |
 | Gemini / 豆包 / Grok 交叉解读 | TODO | 尚未实际调用，不能伪造意见 |
