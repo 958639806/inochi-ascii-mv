@@ -7,7 +7,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const output = path.join(root, 'reviews', 't01', 'ui-report.json');
+const outputDirectory = path.resolve(root, process.env.PILOT_OUTPUT_DIR || 'reviews/t01');
+const relativeToReviews = path.relative(path.join(root, 'reviews'), outputDirectory);
+if (relativeToReviews.startsWith('..') || path.isAbsolute(relativeToReviews)) {
+  throw new Error('PILOT_OUTPUT_DIR must stay within the project reviews directory.');
+}
+const output = path.join(outputDirectory, 'ui-report.json');
 const url = process.env.PILOT_URL || 'http://127.0.0.1:4173';
 const channel = process.env.PILOT_BROWSER_CHANNEL || 'msedge';
 const report = {
@@ -166,7 +171,7 @@ try {
     await mkdir(path.dirname(output), { recursive: true });
     await writeFile(output, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
     console.log(`${report.status}: ${report.checks.filter((item) => item.passed).length}/${report.checks.length} UI/audio smoke checks.`);
-    console.log('Report: reviews/t01/ui-report.json; muted engineering playback only, no listening review.');
+    console.log(`Report: ${path.relative(root, output).split(path.sep).join('/')}; muted engineering playback only, no listening review.`);
   } catch (error) { console.error(`FAIL saving UI report: ${errorText(error)}`); process.exitCode = 1; }
   if (!passed) {
     for (const error of report.fatalErrors) console.error(error);

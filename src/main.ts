@@ -32,7 +32,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
     <section class="transport" aria-label="预览控制">
       <div class="transport-row">
-        <button id="play" class="primary" disabled>试听预览</button>
+        <button id="loop-s01" class="primary" disabled>循环看 S01</button>
+        <button id="play" disabled>试听预览</button>
         <label class="frame-label">FRAME <input id="frame-input" type="number" min="0" max="899" step="1" value="0" aria-label="跳转到帧" /></label>
         <div class="keyframes"><span>首轮审阅</span><button data-frame="0">000</button><button data-frame="36">036</button><button data-frame="71">071</button></div>
         <span id="frame-count">000 / 899</span>
@@ -40,7 +41,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <input id="scrub" type="range" min="0" max="899" step="1" value="0" aria-label="帧时间轴" />
     </section>
     <section class="shots" aria-label="镜头导航">${pilotTimeline.shots.map((shot) => `<button class="shot" data-frame="${shot.first_frame}" data-shot="${shot.id}"><span>${shot.id}<small>${shot.id === 'S01' ? '可预览' : '待实现'}</small></span><strong>${shot.name}</strong><em>${shot.first_frame}–${shot.last_frame_exclusive - 1} 帧</em></button>`).join('')}</section>
-    <footer class="notes"><p>当前实现 S01 人形、呼吸与空间窗口。S02–S08 已可查询时间轴，画面保持 S01 尾帧。</p><p>歌词与鼓点尚未精校 · 三张静帧用于构图与可读性审阅</p></footer>
+    <footer class="notes"><p>点“循环看 S01”可无声反复查看肩胸、头部与手臂动作。试听 1.2 秒后进入待实现镜头，画面保持 S01 尾帧。</p><p>歌词与鼓点尚未精校 · 三张静帧用于构图与可读性审阅</p></footer>
     <p id="error" role="alert" hidden></p>
     <audio id="pilot-audio" preload="none" src="${audioUrl}"></audio>
   </main>`;
@@ -54,11 +55,20 @@ const audio = element<HTMLAudioElement>('pilot-audio');
 const slider = element<HTMLInputElement>('scrub');
 const input = element<HTMLInputElement>('frame-input');
 const play = element<HTMLButtonElement>('play');
+const loop = element<HTMLButtonElement>('loop-s01');
 const defaultSeed = pilotTimeline.timing.random_seed;
+const fps = pilotTimeline.video.fps_num / pilotTimeline.video.fps_den;
+const lastOutputFrame = pilotTimeline.video.total_frames - 1;
+const firstShot = pilotTimeline.shots.find((shot) => shot.id === 'S01');
+if (!firstShot) throw new Error('The pilot timeline must define S01.');
+const loopFirstFrame = firstShot.first_frame;
+const loopFrameCount = firstShot.last_frame_exclusive - loopFirstFrame;
 let currentFrame = 0;
 let currentSeed = defaultSeed;
 let scene: PilotScene;
 let previewTick = 0;
+let looping = false;
+let loopOrigin = 0;
 
 function showError(error: unknown): void {
   const box = element('error');
@@ -69,6 +79,8 @@ function showError(error: unknown): void {
 function stopPreview(): void {
   audio.pause();
   cancelAnimationFrame(previewTick);
+  looping = false;
+  loop.textContent = '循环看 S01';
   play.textContent = '试听预览';
 }
 
@@ -85,7 +97,7 @@ function drawFrame(frame: number, seed: number): RenderEvidence {
   element('shot-heading').textContent = `${info.shot.id} / ${info.shot.name}`;
   element('time-heading').textContent = `${info.localSeconds.toFixed(3)}s · 原曲 ${info.sourceSeconds.toFixed(3)}s`;
   element('seed-heading').textContent = `SEED ${seed}`;
-  element('implementation').textContent = info.implemented ? 'S01 工程预览 · 视觉待导演审阅' : `${info.shot.id} 待实现 · 当前画面为 S01 尾帧`;
+  element('implementation').textContent = info.implemented ? (looping ? 'S01 无声循环 · 身体动作审阅' : 'S01 动作修订 · 视觉待导演审阅') : `${info.shot.id} 待实现 · 当前画面为 S01 尾帧`;
   document.querySelectorAll<HTMLElement>('[data-shot]').forEach((button) => {
     button.classList.toggle('active', button.dataset.shot === info.shot.id);
     button.setAttribute('aria-pressed', String(button.dataset.shot === info.shot.id));
@@ -100,6 +112,7 @@ window.pilotReady = (async () => {
   drawFrame(0, defaultSeed);
   element('ready-state').textContent = '场景就绪';
   play.disabled = false;
+  loop.disabled = false;
 })();
 
 window.renderFrame = async (frame, seed = defaultSeed) => {
@@ -116,7 +129,7 @@ void window.pilotReady.catch((error: unknown) => {
 async function seek(frame: number): Promise<void> {
   try {
     await window.renderFrame(frame, currentSeed);
-    audio.currentTime = frame / 60;
+    audio.currentTime = frame / fps;
     element('error').hidden = true;
   } catch (error) {
     showError(error);
@@ -131,10 +144,36 @@ document.querySelectorAll<HTMLButtonElement>('[data-frame]').forEach((button) =>
 
 function previewFromAudio(): void {
   if (audio.paused) return;
-  const frame = Math.min(899, Math.floor(audio.currentTime * 60));
+  const frame = Math.min(lastOutputFrame, Math.floor(audio.currentTime * fps));
   drawFrame(frame, currentSeed);
   previewTick = requestAnimationFrame(previewFromAudio);
 }
+
+// This clock only selects preview frames; renderFrame itself never reads it.
+function loopFromTime(time: number): void {
+  if (!looping) return;
+  const elapsedFrames = Math.max(0, Math.floor((time - loopOrigin) * fps / 1000));
+  drawFrame(loopFirstFrame + elapsedFrames % loopFrameCount, currentSeed);
+  previewTick = requestAnimationFrame(loopFromTime);
+}
+
+loop.addEventListener('click', async () => {
+  if (looping) {
+    stopPreview();
+    return;
+  }
+  try {
+    await window.pilotReady;
+    stopPreview();
+    looping = true;
+    loop.textContent = '停止循环';
+    loopOrigin = performance.now();
+    loopFromTime(loopOrigin);
+  } catch (error) {
+    stopPreview();
+    showError(error);
+  }
+});
 
 play.addEventListener('click', async () => {
   if (!audio.paused) {
@@ -143,8 +182,9 @@ play.addEventListener('click', async () => {
   }
   try {
     await window.pilotReady;
-    if (currentFrame === 899) drawFrame(0, currentSeed);
-    audio.currentTime = currentFrame / 60;
+    stopPreview();
+    if (currentFrame === lastOutputFrame) drawFrame(0, currentSeed);
+    audio.currentTime = currentFrame / fps;
     await audio.play();
     play.textContent = '暂停试听';
     previewFromAudio();
@@ -156,7 +196,7 @@ play.addEventListener('click', async () => {
 
 audio.addEventListener('ended', () => {
   stopPreview();
-  drawFrame(899, currentSeed);
+  drawFrame(lastOutputFrame, currentSeed);
 });
 window.addEventListener('pagehide', () => {
   stopPreview();

@@ -52,3 +52,15 @@
 - 下一步建议：导演审阅此轮 PR；必要时只改 S01 的最小比例/姿态/亮度；随后沿同一字符 ID 实施 T02 S04/S06。
 - 是否需要用户/导演决策：是。人形比例与偏直姿态、细字符是否保留；后景窗明暗/遮挡关系；动态试听下呼吸与慢推幅度。待审问题同时写入 PR，不自动启动其他模型或合并。
 - 实际 Draft PR：https://github.com/958639806/inochi-ascii-mv/pull/1 。创建前已核验远端分支为 `dffd93a4e8f8ef9c974a2ebe585a20aafe06fd89`，与本地 HEAD 一致；创建返回真实 URL，仓库 Private。当前补写 PR 链接的提交将正常追加到同一分支，不强推或合并。
+
+## Round 2 / 2026-10-10 / Codex — R001 人物像静止
+- 起始 commit：`8ca9f7ad786bf27cc6e6230c186e6a549deb59a9`；同一 `codex/pilot-v1` 分支与 Draft PR #1，结果提交见此轮 PR head。
+- 用户直接反馈：人物感觉没有动。查证旧版头/胸最大 XY 位移投影估算约 0.62/0.91 px；真实试听 1.35 s 时到 frame 81 / S02，确实保持 S01 尾帧（不是播放器未推进）。
+- 修改：只调整 S01，肩胸起伏约 3.44 px、头部俯仰约 4.03 px、双臂约 6.2 px；腿脚固定、字符 ID/seed/镜头时长不变。以上为 960×540、固定相机参数的换算估计，未夸大为实际逐像素或跨硬件保证。
+- 新增“循环看 S01”无声短段预览，反复 0–71 后回首帧；停止/手动跳帧/`renderFrame`/试听互斥，不影响按帧离线复现。没有用它假装实现 S02–S08。
+- 实际测试：`pnpm test` 39 PASS（含运动幅度与固定腿脚）；`pnpm build` PASS（543 kB chunk 提示保留）；构建预览 `render_keyframes.mjs` 62/62 PASS；`check_preview.mjs` 12/12 PASS；`check_motion_preview.mjs` 16/16 PASS。均用系统 Edge / Playwright；播放测试静音。
+- 本轮浏览器命令：`$env:PILOT_BROWSER_CHANNEL='msedge'; $env:PILOT_URL='http://127.0.0.1:4173'; $env:PILOT_OUTPUT_DIR='reviews/t01-motion'` 后分别执行 `node scripts/render_keyframes.mjs`、`node scripts/check_preview.mjs`、`node scripts/check_motion_preview.mjs`。
+- 位移记录：实际 Node + Playwright 调用旧 HEAD 快照和当前源码的 `sampleCharacterFrame`，逐一取 0–71 帧各字符 XY 范围，按固定相机 38°/10.9 距离/540 高换算；旧源码临时文件已删除，无帧序列提交。报告记录这是估算，不是音乐同步或艺术认可。
+- 产物：`reviews/t01-motion/` 中 baseline/revised-motion.json、3 实拍关键帧、workbench-loop.png、3 类浏览器报告与真实命令输出；上一轮 `reviews/t01/` 原文件保留。日志仅规范行尾空白。源码修改后的 Python 交接测试本轮未重跑，其配置与音频未修改。
+- 待审：是否现在能清楚感到肩胸/头/手动作、是否仍克制；短段循环返回首帧的回跳仅用于预览。R001 状态 ADDRESSED，等待用户/导演确认，不标 VERIFIED。
+- 下一步：复审 R001，再沿既有 NEXT 进入 T02；没有扩大到全曲、导出 MP4 或自动合并。

@@ -7,7 +7,8 @@ describe('fixed character samples and frame reconstruction', () => {
     expect(new Set(samples.map((point) => point.id)).size).toBe(samples.length);
     expect(characterIdHash(createBodySamples())).toBe(characterIdHash(samples));
     expect(new Set(samples.map((point) => point.part)).size).toBe(9);
-    expect(samples.length).toBeGreaterThan(1000);
+    expect(samples.length).toBe(1426);
+    expect(characterIdHash(samples)).toBe('149d2e90');
   });
   it('reconstructs the same frame after arbitrary jumps and seed changes', () => {
     const first = sampleCharacterFrame(samples, 36, 958639806);
@@ -28,6 +29,29 @@ describe('fixed character samples and frame reconstruction', () => {
   });
   it('retains the S01 end pose for unimplemented shots', () => {
     expect(sampleCharacterFrame(samples, 899, 958639806)).toEqual(sampleCharacterFrame(samples, 71, 958639806));
+  });
+  it('has visible but restrained shoulder, head and arm motion with planted feet', () => {
+    const frames = Array.from({ length: 72 }, (_, frame) => sampleCharacterFrame(samples, frame, 958639806));
+    const maxXYRange = (part: string) => {
+      let maximum = 0;
+      samples.forEach((sample, index) => {
+        if (!sample.part.startsWith(part)) return;
+        const xs = frames.map((state) => state.positions[index * 3]);
+        const ys = frames.map((state) => state.positions[index * 3 + 1]);
+        maximum = Math.max(maximum, Math.hypot(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)));
+      });
+      return maximum;
+    };
+    // At the 960x540 S01 camera these ranges are several pixels, not subpixel drift.
+    expect(maxXYRange('torso')).toBeGreaterThan(0.035);
+    expect(maxXYRange('torso')).toBeLessThan(0.08);
+    expect(maxXYRange('head')).toBeGreaterThan(0.035);
+    expect(maxXYRange('head')).toBeLessThan(0.08);
+    expect(maxXYRange('arm')).toBeGreaterThan(0.06);
+    expect(maxXYRange('arm')).toBeLessThan(0.12);
+    expect(maxXYRange('foot')).toBe(0);
+    expect(maxXYRange('leg')).toBe(0);
+    for (const state of frames) expect(state.finite).toBe(true);
   });
   it('does not rely on a mutable random generator', () => {
     expect(noise(958639806, 100)).toBe(noise(958639806, 100));

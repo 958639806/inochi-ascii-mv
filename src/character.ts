@@ -116,7 +116,14 @@ export function characterIdHash(samples: readonly BodySample[]): string {
 export function sampleCharacterFrame(samples: readonly BodySample[], frame: number, seed: number): CharacterFrame {
   const t = Math.max(0, Math.min(S01_LAST_FRAME, frame)) * pilotTimeline.video.fps_den / pilotTimeline.video.fps_num;
   const phase = noise(seed, 0) * Math.PI * 2;
-  const breath = Math.sin(t * 2.1 + phase);
+  const breath = Math.sin(t * 2.6 + phase);
+  const smooth = (value: number) => {
+    const clamped = Math.max(0, Math.min(1, value));
+    return clamped * clamped * (3 - 2 * clamped);
+  };
+  // The shoulder anchor follows the same upper-torso deformation as its edge.
+  const shoulderWeight = smooth((0.78 + 0.65) / 1.53);
+  const shoulderRise = breath * (0.022 * shoulderWeight + 0.005 * (1 - Math.abs(0.78 - 0.34) / 0.9));
   const positions = new Float32Array(samples.length * 3);
   const brightness = new Float32Array(samples.length);
   const bounds = { min: [Infinity, Infinity, Infinity], max: [-Infinity, -Infinity, -Infinity] };
@@ -127,13 +134,30 @@ export function sampleCharacterFrame(samples: readonly BodySample[], frame: numb
     let x = restX;
     let y = restY;
     let z = restZ;
-    if (sample.part === 'torso' || sample.part.startsWith('arm')) {
-      x *= 1 + breath * 0.012 * chestWeight;
-      y += breath * 0.011 * chestWeight;
-      z += breath * 0.018 * chestWeight * (sample.front ? 1 : -1);
+    if (sample.part === 'torso') {
+      const upperWeight = smooth((restY + 0.65) / 1.53);
+      x *= 1 + breath * 0.03 * upperWeight;
+      y += breath * (0.022 * upperWeight + 0.005 * chestWeight);
+      z += breath * 0.032 * chestWeight * (sample.front ? 1 : -1);
+    } else if (sample.part.startsWith('arm')) {
+      // Rotate the entire arm about its breathing shoulder, retaining its elbow.
+      const side = sample.part === 'arm-left' ? -1 : 1;
+      const pivotX = side * 0.61;
+      const angle = side * breath * 0.016;
+      const cos = Math.cos(angle);
+      const sin = Math.sin(angle);
+      const relativeX = restX - pivotX;
+      const relativeY = restY - 0.78;
+      x = pivotX + relativeX * cos - relativeY * sin + pivotX * breath * 0.03 * shoulderWeight;
+      y = 0.78 + relativeX * sin + relativeY * cos + shoulderRise;
     } else if (sample.part === 'head' || sample.part === 'neck') {
-      y += breath * 0.008;
-      x += Math.sin(t * 0.9 + phase) * 0.005;
+      // A restrained nod connects through the neck; the lower neck remains anchored.
+      const neckBlend = sample.part === 'neck' ? smooth((restY - 0.85) / 0.2) : 1;
+      const pitch = -breath * 0.035 * neckBlend;
+      const relativeY = restY - 0.85;
+      y = 0.85 + relativeY * Math.cos(pitch) - restZ * Math.sin(pitch) + shoulderRise;
+      z = relativeY * Math.sin(pitch) + restZ * Math.cos(pitch);
+      x += breath * 0.008 * relativeY;
     }
     positions.set([x, y, z], index * 3);
     const chestDistance = Math.hypot(restX * 1.3, restY - 0.37);

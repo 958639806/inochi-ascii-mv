@@ -12,7 +12,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const outputDirectory = path.join(root, 'reviews', 't01');
+const outputDirectory = path.resolve(root, process.env.PILOT_OUTPUT_DIR || 'reviews/t01');
+const relativeToReviews = path.relative(path.join(root, 'reviews'), outputDirectory);
+if (relativeToReviews.startsWith('..') || path.isAbsolute(relativeToReviews)) {
+  throw new Error('PILOT_OUTPUT_DIR must stay within the project reviews directory.');
+}
+const outputRelative = path.relative(root, outputDirectory).split(path.sep).join('/');
 const reportPath = path.join(outputDirectory, 'browser-report.json');
 const keyframes = [0, 36, 71];
 const boundaryFrames = [0, 71, 72, 149, 150, 239, 240, 329, 330, 419, 420, 569, 570, 707, 708, 899];
@@ -313,7 +318,7 @@ try {
     const png = await page.locator('canvas#pilot-canvas').screenshot({ type: 'png', animations: 'disabled', scale: 'css' });
     await writeFile(path.join(outputDirectory, filename), png);
     const entry = {
-      frame, file: `reviews/t01/${filename}`, pngSha256: sha256(png), pngDimensions: pngDimensions(png),
+      frame, file: `${outputRelative}/${filename}`, pngSha256: sha256(png), pngDimensions: pngDimensions(png),
       snapshot: rendered.snapshot, pixels: rendered.pixels,
     };
     report.keyframes.push(entry);
@@ -392,7 +397,7 @@ try {
     await mkdir(outputDirectory, { recursive: true });
     await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
     console.log(`${report.status}: ${report.checks.filter((item) => item.passed).length}/${report.checks.length} browser checks; ${report.keyframes.length} actual canvas PNGs.`);
-    console.log('Report: reviews/t01/browser-report.json');
+    console.log(`Report: ${outputRelative}/browser-report.json`);
   } catch (error) {
     console.error(`FAIL: Could not save browser report: ${errorText(error)}`);
     process.exitCode = 1;
