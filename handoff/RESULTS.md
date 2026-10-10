@@ -28,3 +28,26 @@
 - 真实测试：发布前 `python scripts/check_package.py` PASS（24 files / 900 frames / 15 s audio）；`python -m unittest discover -s tests -v` 13 tests，OK。
 - 产物：任务书、配置、已批准的试片音频和原始交接文件已在私有远端初始提交中。
 - 动画、视频、导演审阅：尚未实施或通过；下一步进入 T01。
+
+## Round 1 / 2026-10-10 / Codex — T01 工程完成，视觉待审
+- 起始 commit：`30e752e43c3f864c141e08f33aa0afe9e181b222`（已核验远端 main）。
+- 工作分支与结果 commit：`codex/pilot-v1`；实现与实拍证据提交 `6763c8fce6a9aead392377402234def69726f0c9`。后续交接记录提交见 PR head，未强推、未自行合并。
+- 本轮任务 ID：T01。
+- 实际修改：Vite + TypeScript + Three.js 与锁文件；唯一 JSON 时间轴查询；固定 1426 人体字符 ID（`149d2e90`）、按帧求值的呼吸/胸口明灭、三层窗口/字符尘/慢推；可等待字体/图集/首帧的 `window.pilotReady` 和 `window.renderFrame(frame, seed)`；跳帧、镜头导航及本地裁切音频试听。
+- S01 frame 0/36/71 已实际渲染；0–899 均能查询镜头；S02–S08 标记未实现并保持 S01 尾帧，不声称完成后续画面。
+- 实际环境：Node 24.19.0 / pnpm 11.25.0；Vite 8.3.4 / TypeScript 7.0.2 / Three.js 0.186.1 / Vitest 5.0.3 / Playwright 1.64.0。系统 Edge 154.0.4258.62，ANGLE / AMD Radeon 780M / D3D11；系统字体未分发，图集声明栈和回退限制见浏览器报告。
+- 测试命令与真实结果：
+  - `pnpm install`：成功安装 49 packages，生成 `pnpm-lock.yaml`；网络重试后完成。
+  - `pnpm test`：2 files、38 tests PASS（900 帧覆盖、16 边界、非法帧、音频零偏移、固定 ID、乱序/种子与有限值）。
+  - `python -m unittest discover -s tests -v`：13 tests，OK；发布后不再对演进的 handoff 运行初始快照校验。
+  - `pnpm build`：PASS。初次 TS18048 已以 guard 后保存文案数组修复；最终有 541 kB 单入口 chunk 的默认体积提示，不阻止构建。
+  - `PILOT_BROWSER_CHANNEL=msedge node scripts/render_keyframes.mjs`（5173 开发预览）：62/62 PASS。
+  - `PILOT_URL=http://127.0.0.1:4173 PILOT_BROWSER_CHANNEL=msedge node scripts/render_keyframes.mjs`（构建预览）：62/62 PASS；3 张 960×540 PNG；71/0/36/0/71/36 乱序与种子切换后像素/PNG hash 全部复现；开发与构建三帧 hash 一致。
+  - `PILOT_URL=http://127.0.0.1:4173 PILOT_BROWSER_CHANNEL=msedge node scripts/check_preview.mjs`：12/12 PASS；按钮/输入/待实现提示、15 秒 FLAC 实际解码与本地零偏移播放、暂停和离线精确帧。浏览器静音，不是人耳听审。
+  - 上述 env 记法用于说明，PowerShell 用 `$env:...` 赋值。实际输出在 `reviews/t01/` 的 `.txt`；日志只规范行尾/尾部空白，不改结果。
+- 已解决的检查失败：metadata 预加载让浏览器取消 FLAC 范围请求，首轮截图检查为 61/62；改为点击试听才加载（`preload=none`），最终截图检查无失败请求。未将初轮失败改写成通过。
+- 产物路径：`reviews/t01/frame-000.png`、`frame-036.png`、`frame-071.png`；`browser-report.json`、`browser-report.dev.json`、`ui-report.json`；审阅索引 `reviews/t01/README.md`。
+- 三个最值得审阅的帧 / 镜头：S01 的 000（轮廓/空间）、036（字符密度/明暗）、071（尾部构图/后景窗与头部）。
+- 未完成：S02–S08 表演、T02 爆裂/重组、歌词/鼓点精校、动态视频、FFmpeg/MP4/1080p60 全序列、导演验收。未调用或虚构 Gemini / 豆包 / Grok 意见。
+- 下一步建议：导演审阅此轮 PR；必要时只改 S01 的最小比例/姿态/亮度；随后沿同一字符 ID 实施 T02 S04/S06。
+- 是否需要用户/导演决策：是。人形比例与偏直姿态、细字符是否保留；后景窗明暗/遮挡关系；动态试听下呼吸与慢推幅度。待审问题同时写入 PR，不自动启动其他模型或合并。
