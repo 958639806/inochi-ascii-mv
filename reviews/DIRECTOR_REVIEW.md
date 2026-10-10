@@ -5,6 +5,8 @@ T01 工程已完成，实际三帧在 `reviews/t01/`；视觉尚未由导演通�
 
 本轮入口：`reviews/t01/README.md`，S01 frame 000/036/071。请评估人体比例/偏直站姿/细字符、窗口明暗与头部关系；呼吸和慢推幅度请用本地工作台动态预览确认。问题同时进入首轮 PR；不虚构导演或外部模型意见。
 
+Draft PR：https://github.com/958639806/inochi-ascii-mv/pull/1
+
 ## 每条意见格式
 - ID：R001
 - 对应 commit：

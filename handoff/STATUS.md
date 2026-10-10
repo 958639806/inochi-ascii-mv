@@ -18,4 +18,4 @@
 | Gemini / 豆包 / Grok 交叉解读 | TODO | 尚未实际调用，不能伪造意见 |
 | 900帧视频与艺术审核 | TODO | 尚未渲染 |
 
-私有发布记录已核验并推送到 main：`30e752e43c3f864c141e08f33aa0afe9e181b222`。T01 工作分支为 `codex/pilot-v1`；工程检查通过不代表导演通过。像素一致仅在已记录的同一浏览器/GPU环境实测；没有 MP4 或 900 帧序列产物。
+私有发布记录已核验并推送到 main：`30e752e43c3f864c141e08f33aa0afe9e181b222`。T01 工作分支为 `codex/pilot-v1`；Draft PR：https://github.com/958639806/inochi-ascii-mv/pull/1 。工程检查通过不代表导演通过。像素一致仅在已记录的同一浏览器/GPU环境实测；没有 MP4 或 900 帧序列产物。

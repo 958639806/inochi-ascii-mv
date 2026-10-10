@@ -5,7 +5,8 @@
 - T01：`codex/pilot-v1` 的 S01 骨架已运行；38 Vitest、13 Python、开发/构建预览各 62 浏览器检查及 12 UI/静音播放检查通过。三张实际关键帧在 `reviews/t01/`，实现提交 `6763c8fce6a9aead392377402234def69726f0c9`。
 
 ## 当前：等待首轮导演审阅
-阅读此轮 PR、`reviews/t01/README.md` 与 frame 000/036/071；按 README 启动工作台查看轻微呼吸和慢推。静帧不能证明动态节奏或歌词/鼓点同步。
+
+实际 Draft PR：https://github.com/958639806/inochi-ascii-mv/pull/1 。阅读 PR、`reviews/t01/README.md` 与 frame 000/036/071；按 README 启动工作台查看轻微呼吸和慢推。静帧不能证明动态节奏或歌词/鼓点同步。
 
 需要导演明确：人体比例/偏直站姿/细字符是否保留；窗口明暗与头部关系；呼吸幅度。反馈写 `reviews/DIRECTOR_REVIEW.md`，标记对应 commit 和最小改动，不自动合并 PR。
 
