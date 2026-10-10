@@ -1,0 +1,33 @@
+# Credentials and local state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+# Large/source audio: only the approved pilot is included
+*.flac
+!assets/audio/pilot_058-073.flac
+*.wav
+*.mp3
+*.m4a
+assets/source/
+# Dependencies / builds / renders
+node_modules/
+dist/
+build/
+frames/
+renders/
+output/
+*.mp4
+*.webm
+*.mov
+*.zip
+*.log
+# Local bootstrap lock (contains no credentials)
+.publish-session.json

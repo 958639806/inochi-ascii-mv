@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "project": "Inochi ASCII MV",
+  "status": "DIRECTOR_DRAFT_NOT_BEAT_ALIGNED",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps_num": 60,
+    "fps_den": 1,
+    "total_frames": 900,
+    "duration_seconds": 15
+  },
+  "preview": {
+    "width": 960,
+    "height": 540,
+    "fps_num": 60,
+    "fps_den": 1
+  },
+  "audio": {
+    "path": "assets/audio/pilot_058-073.flac",
+    "source_start_seconds": 58,
+    "source_end_seconds_exclusive": 73,
+    "playback_offset_seconds": 0,
+    "sample_rate_hz": 48000,
+    "sample_count_per_channel": 720000
+  },
+  "timing": {
+    "range_convention": "[first_frame,last_frame_exclusive)",
+    "source_time_formula": "58 + frame/60",
+    "local_time_formula": "frame/60",
+    "beat_phase_verified": false,
+    "lyric_alignment_verified": false,
+    "random_seed": 958639806
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "name": "压抑建立",
+      "first_frame": 0,
+      "last_frame_exclusive": 72,
+      "local_start_seconds": 0.0,
+      "local_end_seconds_exclusive": 1.2,
+      "source_start_seconds": 58.0,
+      "source_end_seconds_exclusive": 59.2,
+      "direction": "极慢前推；角色呼吸；少量前后景窗口",
+      "screen_copy": [
+        "LIFE VALUE: HIGH",
+        "EMPATHY RESPONSE READY",
+        "SUBJECT STATUS: UNSTABLE"
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "语言围困",
+      "first_frame": 72,
+      "last_frame_exclusive": 150,
+      "local_start_seconds": 1.2,
+      "local_end_seconds_exclusive": 2.5,
+      "source_start_seconds": 59.2,
+      "source_end_seconds_exclusive": 60.5,
+      "direction": "窗口聚拢；角色低头掉字；镜头下压",
+      "screen_copy": [
+        "EMPATHY SCORE: 98",
+        "ACTION TAKEN: NONE"
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "信息过载",
+      "first_frame": 150,
+      "last_frame_exclusive": 240,
+      "local_start_seconds": 2.5,
+      "local_end_seconds_exclusive": 4.0,
+      "source_start_seconds": 60.5,
+      "source_end_seconds_exclusive": 62.0,
+      "direction": "窗体转为文本障碍；局部碰撞碎裂",
+      "screen_copy": []
+    },
+    {
+      "id": "S04",
+      "name": "第一次爆裂",
+      "first_frame": 240,
+      "last_frame_exclusive": 330,
+      "local_start_seconds": 4.0,
+      "local_end_seconds_exclusive": 5.5,
+      "source_start_seconds": 62.0,
+      "source_end_seconds_exclusive": 63.5,
+      "direction": "墙体逼近；人体字符爆散；相机穿裂口",
+      "screen_copy": []
+    },
+    {
+      "id": "S05",
+      "name": "后台反讽",
+      "first_frame": 330,
+      "last_frame_exclusive": 420,
+      "local_start_seconds": 5.5,
+      "local_end_seconds_exclusive": 7.0,
+      "source_start_seconds": 63.5,
+      "source_end_seconds_exclusive": 65.0,
+      "direction": "表层界面背后；同一字符核心；空旷日志",
+      "screen_copy": [
+        "response automated",
+        "pain not processed",
+        "queue full",
+        "case ignored"
+      ]
+    },
+    {
+      "id": "S06",
+      "name": "重组与穿透",
+      "first_frame": 420,
+      "last_frame_exclusive": 570,
+      "local_start_seconds": 7.0,
+      "local_end_seconds_exclusive": 9.5,
+      "source_start_seconds": 65.0,
+      "source_end_seconds_exclusive": 67.5,
+      "direction": "同一字符 ID 回流；躯干、手臂、头部重组；跟拍",
+      "screen_copy": []
+    },
+    {
+      "id": "S07",
+      "name": "顶点对峙",
+      "first_frame": 570,
+      "last_frame_exclusive": 708,
+      "local_start_seconds": 9.5,
+      "local_end_seconds_exclusive": 11.8,
+      "source_start_seconds": 67.5,
+      "source_end_seconds_exclusive": 69.8,
+      "direction": "前景狼狈迈步；呼吸可见；面板失效",
+      "screen_copy": [
+        "STATUS: ACTIVE"
+      ]
+    },
+    {
+      "id": "S08",
+      "name": "余震与钩子",
+      "first_frame": 708,
+      "last_frame_exclusive": 900,
+      "local_start_seconds": 11.8,
+      "local_end_seconds_exclusive": 15.0,
+      "source_start_seconds": 69.8,
+      "source_end_seconds_exclusive": 73.0,
+      "direction": "后拉露出残留系统；低速碎片；不淡黑结束",
+      "screen_copy": []
+    }
+  ],
+  "review_frames": [
+    0,
+    36,
+    71,
+    72,
+    111,
+    149,
+    150,
+    195,
+    239,
+    240,
+    285,
+    329,
+    330,
+    375,
+    419,
+    420,
+    495,
+    569,
+    570,
+    639,
+    707,
+    708,
+    804,
+    899
+  ],
+  "postfx": {
+    "full_screen_flash_enabled": false,
+    "temporal_history_required": false
+  }
+}

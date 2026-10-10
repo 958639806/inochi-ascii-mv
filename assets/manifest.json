@@ -1,0 +1,72 @@
+{
+  "created_date": "2026-10-10",
+  "scope": "private 15-second pilot",
+  "source": {
+    "original_filename": "カンザキイオリ - 命に嫌われている.flac",
+    "bytes": 167740517,
+    "sha256": "efd958688f1a669b687e2a672ab0e3b5931fee42f5680961349e0e03c20ccb4b",
+    "included_in_repository": false,
+    "reason": "Full 192 kHz source retained in original conversation, above ordinary Git file limit"
+  },
+  "pilot": {
+    "path": "assets/audio/pilot_058-073.flac",
+    "bytes": 3675882,
+    "sha256": "560410ae0f07c64f57153e88a168027ccfab8cbb72f08d41f4ba45d1b128e7d7",
+    "source_range_seconds": [
+      58,
+      73
+    ],
+    "sample_rate_hz": 48000,
+    "bits_per_sample": 24,
+    "channels": 2,
+    "duration_seconds": 15,
+    "resampled_from_original": true,
+    "embedded_artwork_and_tags_removed": true,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "flac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "time_base": "1/48000",
+          "duration_ts": 720000,
+          "bits_per_raw_sample": "24"
+        }
+      ],
+      "format": {
+        "duration": "15.000000",
+        "size": "3675882"
+      }
+    }
+  },
+  "derivation_command": "ffmpeg -i INPUT -map 0:a:0 -vn -map_metadata -1 -af atrim=start=58:end=73,asetpts=PTS-STARTPTS -ar 48000 -c:a flac -sample_fmt s32 -bits_per_raw_sample 24 assets/audio/pilot_058-073.flac",
+  "external_model_analysis": {
+    "Gemini": "NOT_RUN",
+    "Doubao": "NOT_RUN",
+    "Grok": "NOT_RUN"
+  },
+  "musical_alignment": {
+    "lyric_timestamps_verified": false,
+    "beat_phase_verified": false
+  },
+  "reference_files": [
+    {
+      "path": "docs/ORIGINAL_CREATIVE_PLAN_v0.1.md",
+      "sha256": "bf489fc18f294a72a1b105c5a14a7d8ec50454e4b62265099c39fad5248669ce",
+      "provenance": "Copied unmodified from a prior conversation attachment; not newly reanalysed"
+    },
+    {
+      "path": "config/full-song.timeline.draft.json",
+      "sha256": "802594f454f6420e76042336329cc0b57f28b3ffe56f04bc190846efadf4ec0e",
+      "provenance": "Copied unmodified from a prior conversation attachment; not newly reanalysed"
+    },
+    {
+      "path": "assets/reference/audio-structure.png",
+      "sha256": "2bcb5d3b8318a3e1e978d975fedfc4151a639b2d252f5787fcdc33e0a654f49c",
+      "provenance": "Copied unmodified from a prior conversation attachment; not newly reanalysed"
+    }
+  ]
+}
