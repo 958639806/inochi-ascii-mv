@@ -1,0 +1,47 @@
+:root { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; color: #d8dddb; background: #0b0d0e; font-synthesis: none; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .5; }
+button:focus-visible, input:focus-visible { outline: 2px solid #9fbdb3; outline-offset: 3px; }
+.workbench { max-width: 1026px; padding: 32px 32px 24px; margin: auto; }
+.masthead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+.identity { display: flex; align-items: center; gap: 15px; }
+.mark { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #46514d; color: #a4b8b0; font-size: 23px; }
+h1 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: .19em; }
+h1 span { color: #68746e; font-weight: 400; }
+.identity p { margin: 6px 0 0; color: #7e8983; font-size: 12px; letter-spacing: .08em; }
+.session { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: flex-end; max-width: 200px; color: #acb8b1; font-size: 12px; }
+.session small { flex-basis: 100%; text-align: right; font-family: Consolas, monospace; color: #617068; }
+.status-dot { width: 5px; height: 5px; border-radius: 50%; background: #86b3a4; }
+.viewer { border: 1px solid #28302d; background: #07090a; }
+.viewer-heading, .viewer-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 15px; color: #8d9c94; font-size: 11px; letter-spacing: .02em; }
+.viewer-heading { border-bottom: 1px solid #232b27; }
+.viewer-heading span:last-child, .viewer-footer span:last-child { font-family: Consolas, monospace; }
+.viewer-footer { border-top: 1px solid #232b27; color: #62736a; }
+#pilot-canvas { width: 100%; aspect-ratio: 16 / 9; display: block; background: #030607; }
+.transport { padding: 20px 0 18px; border-bottom: 1px solid #25302a; }
+.transport-row { display: flex; align-items: center; gap: 22px; margin-bottom: 18px; }
+button { background: transparent; color: #9ca9a1; border: 1px solid #34433b; border-radius: 2px; padding: 7px 12px; font-size: 12px; }
+button:hover { background: #1c2822; color: #e0ece5; }
+.primary { color: #c6d9ce; background: #24382c; border-color: #3e5847; min-width: 94px; }
+.frame-label { display: flex; align-items: center; gap: 9px; color: #768b7e; font: 11px Consolas, monospace; }
+#frame-input { width: 66px; padding: 7px 7px; border: 1px solid #304038; border-radius: 2px; background: #111a15; color: #c0d3c6; }
+.keyframes { display: flex; align-items: center; gap: 6px; }
+.keyframes span { font-size: 11px; color: #697a70; margin-right: 5px; }
+.keyframes button { font: 11px Consolas, monospace; }
+#frame-count { margin-left: auto; color: #72867a; font: 12px Consolas, monospace; }
+#scrub { accent-color: #91bba4; width: 100%; display: block; height: 3px; cursor: pointer; }
+.shots { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; margin: 18px 0; }
+.shot { text-align: left; border-color: #252e29; padding: 12px 8px; display: flex; flex-direction: column; gap: 9px; color: #58675e; }
+.shot > span { display: flex; justify-content: space-between; font: 11px Consolas, monospace; }
+.shot small { font: 9px "Segoe UI", sans-serif; color: #57655d; }
+.shot strong { font-size: 11px; font-weight: 400; color: #87978c; }
+.shot em { font: normal 9px Consolas, monospace; }
+.shot.active { border-color: #698c76; background: #18251d; color: #a3c4ae; }
+.shot.active strong, .shot.active small { color: #b4cdbd; }
+.notes { color: #65776b; font-size: 11px; line-height: 1.8; }
+.notes p { margin: 2px 0; }
+#error { border: 1px solid #765345; background: #251b17; color: #d9b5a5; padding: 12px; font-size: 12px; }
+@media (max-width: 800px) { .workbench { padding: 20px 12px; } .masthead { margin-bottom: 20px; } .shots { grid-template-columns: repeat(4, 1fr); } .transport-row { gap: 12px; flex-wrap: wrap; } .keyframes { order: 4; } .viewer-heading, .viewer-footer { font-size: 9px; padding: 9px; } }

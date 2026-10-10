@@ -31,3 +31,6 @@ output/
 *.log
 # Local bootstrap lock (contains no credentials)
 .publish-session.json
+*.tsbuildinfo
+test-results/
+playwright-report/

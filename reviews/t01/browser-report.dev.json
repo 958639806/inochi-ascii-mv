@@ -1,0 +1,2535 @@
+{
+  "schemaVersion": 1,
+  "task": "T01 minimum runnable skeleton",
+  "startedAt": "2026-10-10T11:13:26.930Z",
+  "completedAt": "2026-10-10T11:13:28.950Z",
+  "status": "PASS",
+  "url": "http://127.0.0.1:5173",
+  "seed": 958639806,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "playwright": "1.64.0",
+    "requestedBrowserChannel": "msedge",
+    "browserVersion": "154.0.4258.62",
+    "headless": true,
+    "atlasFontStackFromSource": "\"Cascadia Mono\", Consolas, \"Courier New\", monospace",
+    "sceneSourceSha256": "7e2697b4d7356bb3264d49b705995cb10d3fd7d7324919afa95e639b208266db",
+    "browser": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "platform": "Win32",
+      "language": "zh-CN",
+      "devicePixelRatio": 1,
+      "fonts": {
+        "status": "loaded",
+        "faces": [],
+        "canvasComputedFamily": "\"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "checks": {
+          "Cascadia Mono": true,
+          "Consolas": true,
+          "Courier New": true,
+          "monospace": true
+        }
+      },
+      "gpu": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "shadingLanguageVersion": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+        "vendor": "WebKit",
+        "renderer": "WebKit WebGL",
+        "unmaskedVendor": "Google Inc. (AMD)",
+        "unmaskedRenderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "contextAttributes": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "default",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": true,
+          "stencil": false,
+          "xrCompatible": false
+        }
+      },
+      "canvas": {
+        "width": 960,
+        "height": 540,
+        "cssWidth": 960,
+        "cssHeight": 540
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "local Vite page loaded successfully",
+      "passed": true,
+      "details": {
+        "httpStatus": 200
+      }
+    },
+    {
+      "name": "pilotReady is awaitable",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "canvas has 960x540 backing and displayed dimensions",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "cssWidth": 960,
+        "cssHeight": 540
+      }
+    },
+    {
+      "name": "document fonts are ready",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "boundary frame 0 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23430760204792023
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6662287712097168,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "boundary frame 71 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 71,
+          "localSeconds": 1.1833333333333333,
+          "sourceSeconds": 59.18333333333333,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "boundary frame 72 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S02",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 72,
+          "localSeconds": 1.2,
+          "sourceSeconds": 59.2,
+          "shotId": "S02",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 149 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S02",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 149,
+          "localSeconds": 2.4833333333333334,
+          "sourceSeconds": 60.483333333333334,
+          "shotId": "S02",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 150 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S03",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 150,
+          "localSeconds": 2.5,
+          "sourceSeconds": 60.5,
+          "shotId": "S03",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 239 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S03",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 239,
+          "localSeconds": 3.9833333333333334,
+          "sourceSeconds": 61.983333333333334,
+          "shotId": "S03",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 240 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 240,
+          "localSeconds": 4,
+          "sourceSeconds": 62,
+          "shotId": "S04",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 329 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 329,
+          "localSeconds": 5.483333333333333,
+          "sourceSeconds": 63.483333333333334,
+          "shotId": "S04",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 330 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S05",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 330,
+          "localSeconds": 5.5,
+          "sourceSeconds": 63.5,
+          "shotId": "S05",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 419 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S05",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 419,
+          "localSeconds": 6.983333333333333,
+          "sourceSeconds": 64.98333333333333,
+          "shotId": "S05",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 420 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 420,
+          "localSeconds": 7,
+          "sourceSeconds": 65,
+          "shotId": "S06",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 569 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 569,
+          "localSeconds": 9.483333333333333,
+          "sourceSeconds": 67.48333333333333,
+          "shotId": "S06",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 570 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 570,
+          "localSeconds": 9.5,
+          "sourceSeconds": 67.5,
+          "shotId": "S07",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 707 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 707,
+          "localSeconds": 11.783333333333333,
+          "sourceSeconds": 69.78333333333333,
+          "shotId": "S07",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 708 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 708,
+          "localSeconds": 11.8,
+          "sourceSeconds": 69.8,
+          "shotId": "S08",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "boundary frame 899 timing/shot/finite state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 899,
+          "localSeconds": 14.983333333333333,
+          "sourceSeconds": 72.98333333333333,
+          "shotId": "S08",
+          "implemented": false
+        }
+      }
+    },
+    {
+      "name": "reject frame 900",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received 900."
+      }
+    },
+    {
+      "name": "reject negative frame",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received -1."
+      }
+    },
+    {
+      "name": "reject fractional frame",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received 0.5."
+      }
+    },
+    {
+      "name": "reject NaN frame",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received NaN."
+      }
+    },
+    {
+      "name": "reject infinite frame",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received Infinity."
+      }
+    },
+    {
+      "name": "reject negative seed",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+      }
+    },
+    {
+      "name": "reject seed greater than uint32",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+      }
+    },
+    {
+      "name": "reject fractional seed",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+      }
+    },
+    {
+      "name": "reject NaN seed",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+      }
+    },
+    {
+      "name": "reject infinite seed",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+      }
+    },
+    {
+      "name": "accept uint32 seed 0",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23411670327186584
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6660165786743164,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "accept uint32 seed 4294967295",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6538022756576538,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "keyframe 0 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23430760204792023
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6662287712097168,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "keyframe 0 PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "keyframe 0 has bright content beyond the dark background",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5589,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4772
+        },
+        "maximumChannel": 242,
+        "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    },
+    {
+      "name": "keyframe 36 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.2362290918827057
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6683636903762817,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "keyframe 36 PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "keyframe 36 has bright content beyond the dark background",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5522,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4822
+        },
+        "maximumChannel": 243,
+        "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    },
+    {
+      "name": "keyframe 71 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 71,
+          "localSeconds": 1.1833333333333333,
+          "sourceSeconds": 59.18333333333333,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "keyframe 71 PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "keyframe 71 has bright content beyond the dark background",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5548,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4742
+        },
+        "maximumChannel": 240,
+        "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    },
+    {
+      "name": "frame 36 changes visible pixels from frame 0",
+      "passed": true,
+      "details": {
+        "frame0PngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+        "frame36PngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+        "frame0PixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+        "frame36PixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc"
+      }
+    },
+    {
+      "name": "S01 character IDs stay fixed across keyframes",
+      "passed": true,
+      "details": {
+        "characterIdHashes": [
+          "149d2e90",
+          "149d2e90",
+          "149d2e90"
+        ]
+      }
+    },
+    {
+      "name": "alternative seed 0 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.656601071357727,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "restore default seed after 0",
+      "passed": true,
+      "details": {
+        "frame": 36,
+        "alternativeSeed": 0,
+        "alternativePixelSha256": "0de8f0757bbd48e948bdec56eface1ad8c822ece4493f893186685820ff530f0",
+        "restoredDefaultSeed": 958639806,
+        "restoredPngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+        "restoredPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "alternative seed 4294967295 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23061266541481018
+            ],
+            "max": [
+              0.9747899770736694,
+              1.662123203277588,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "restore default seed after 4294967295",
+      "passed": true,
+      "details": {
+        "frame": 36,
+        "alternativeSeed": 4294967295,
+        "alternativePixelSha256": "29db7e1d28e7a4ee63e5fd09936bdf76cbad82e587d0f5ad3ea7ec4b6ac231dd",
+        "restoredDefaultSeed": 958639806,
+        "restoredPngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+        "restoredPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 71 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 71,
+          "localSeconds": 1.1833333333333333,
+          "sourceSeconds": 59.18333333333333,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 71 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 71,
+        "pngSha256": "838bc576b5ef29cc4d1822b989162fe0a7d1c9345e1589f21418eb92d825c70c",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5548,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4742
+          },
+          "maximumChannel": 240,
+          "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 0 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23430760204792023
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6662287712097168,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 0 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 0,
+        "pngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5589,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4772
+          },
+          "maximumChannel": 242,
+          "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 36 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.2362290918827057
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6683636903762817,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 36 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 36,
+        "pngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5522,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4822
+          },
+          "maximumChannel": 243,
+          "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 0 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23430760204792023
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6662287712097168,
+              0.3745584487915039
+            ]
+          },
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 0 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 0,
+        "pngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5589,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4772
+          },
+          "maximumChannel": 242,
+          "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 71 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.781666666666666
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.23000000417232513
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6605544090270996,
+              0.3745584487915039
+            ]
+          },
+          "frame": 71,
+          "localSeconds": 1.1833333333333333,
+          "sourceSeconds": 59.18333333333333,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 71 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 71,
+        "pngSha256": "838bc576b5ef29cc4d1822b989162fe0a7d1c9345e1589f21418eb92d825c70c",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5548,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4742
+          },
+          "maximumChannel": 240,
+          "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 36 finite scene state",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -0.9848574995994568,
+              -2.181666612625122,
+              -0.2362290918827057
+            ],
+            "max": [
+              0.9747899770736694,
+              1.6683636903762817,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "out-of-order frame 36 reproduces baseline",
+      "passed": true,
+      "details": {
+        "frame": 36,
+        "pngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+        "pixels": {
+          "width": 960,
+          "height": 540,
+          "readPixelsError": 0,
+          "nonBlackPixels": 518400,
+          "pixelsAtLeast8": 518400,
+          "brightPixelsAtLeast64": 5522,
+          "centralSubjectRegion": {
+            "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+            "xMin": 336,
+            "xMaxExclusive": 624,
+            "yMin": 108,
+            "yMaxExclusive": 486,
+            "brightPixelsAtLeast64": 4822
+          },
+          "maximumChannel": 243,
+          "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+          "method": "WebGL readPixels immediately after awaited renderFrame"
+        },
+        "pngHashMatches": true,
+        "pixelHashMatches": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "no browser console errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no unhandled JavaScript page errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no failed browser requests",
+      "passed": true,
+      "details": {
+        "requests": []
+      }
+    }
+  ],
+  "boundaryFrames": [
+    {
+      "frame": 0,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.9
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23430760204792023
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6662287712097168,
+            0.3745584487915039
+          ]
+        },
+        "frame": 0,
+        "localSeconds": 0,
+        "sourceSeconds": 58,
+        "shotId": "S01",
+        "implemented": true
+      }
+    },
+    {
+      "frame": 71,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 71,
+        "localSeconds": 1.1833333333333333,
+        "sourceSeconds": 59.18333333333333,
+        "shotId": "S01",
+        "implemented": true
+      }
+    },
+    {
+      "frame": 72,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 72,
+        "localSeconds": 1.2,
+        "sourceSeconds": 59.2,
+        "shotId": "S02",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 149,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 149,
+        "localSeconds": 2.4833333333333334,
+        "sourceSeconds": 60.483333333333334,
+        "shotId": "S02",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 150,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 150,
+        "localSeconds": 2.5,
+        "sourceSeconds": 60.5,
+        "shotId": "S03",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 239,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 239,
+        "localSeconds": 3.9833333333333334,
+        "sourceSeconds": 61.983333333333334,
+        "shotId": "S03",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 240,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 240,
+        "localSeconds": 4,
+        "sourceSeconds": 62,
+        "shotId": "S04",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 329,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 329,
+        "localSeconds": 5.483333333333333,
+        "sourceSeconds": 63.483333333333334,
+        "shotId": "S04",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 330,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 330,
+        "localSeconds": 5.5,
+        "sourceSeconds": 63.5,
+        "shotId": "S05",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 419,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 419,
+        "localSeconds": 6.983333333333333,
+        "sourceSeconds": 64.98333333333333,
+        "shotId": "S05",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 420,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 420,
+        "localSeconds": 7,
+        "sourceSeconds": 65,
+        "shotId": "S06",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 569,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 569,
+        "localSeconds": 9.483333333333333,
+        "sourceSeconds": 67.48333333333333,
+        "shotId": "S06",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 570,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 570,
+        "localSeconds": 9.5,
+        "sourceSeconds": 67.5,
+        "shotId": "S07",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 707,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 707,
+        "localSeconds": 11.783333333333333,
+        "sourceSeconds": 69.78333333333333,
+        "shotId": "S07",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 708,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 708,
+        "localSeconds": 11.8,
+        "sourceSeconds": 69.8,
+        "shotId": "S08",
+        "implemented": false
+      }
+    },
+    {
+      "frame": 899,
+      "rendered": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 899,
+        "localSeconds": 14.983333333333333,
+        "sourceSeconds": 72.98333333333333,
+        "shotId": "S08",
+        "implemented": false
+      }
+    }
+  ],
+  "invalidInputs": [
+    {
+      "label": "frame 900",
+      "rejected": true,
+      "error": "RangeError: Output frame must be an integer from 0 to 899; received 900."
+    },
+    {
+      "label": "negative frame",
+      "rejected": true,
+      "error": "RangeError: Output frame must be an integer from 0 to 899; received -1."
+    },
+    {
+      "label": "fractional frame",
+      "rejected": true,
+      "error": "RangeError: Output frame must be an integer from 0 to 899; received 0.5."
+    },
+    {
+      "label": "NaN frame",
+      "rejected": true,
+      "error": "RangeError: Output frame must be an integer from 0 to 899; received NaN."
+    },
+    {
+      "label": "infinite frame",
+      "rejected": true,
+      "error": "RangeError: Output frame must be an integer from 0 to 899; received Infinity."
+    },
+    {
+      "label": "negative seed",
+      "rejected": true,
+      "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+    },
+    {
+      "label": "seed greater than uint32",
+      "rejected": true,
+      "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+    },
+    {
+      "label": "fractional seed",
+      "rejected": true,
+      "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+    },
+    {
+      "label": "NaN seed",
+      "rejected": true,
+      "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+    },
+    {
+      "label": "infinite seed",
+      "rejected": true,
+      "error": "RangeError: seed 必须为 0–4294967295 的整数。"
+    }
+  ],
+  "acceptedSeedEndpoints": [
+    {
+      "seed": 0,
+      "accepted": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.9
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23411670327186584
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6660165786743164,
+            0.3745584487915039
+          ]
+        },
+        "frame": 0,
+        "localSeconds": 0,
+        "sourceSeconds": 58,
+        "shotId": "S01",
+        "implemented": true
+      }
+    },
+    {
+      "seed": 4294967295,
+      "accepted": true,
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.9
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6538022756576538,
+            0.3745584487915039
+          ]
+        },
+        "frame": 0,
+        "localSeconds": 0,
+        "sourceSeconds": 58,
+        "shotId": "S01",
+        "implemented": true
+      }
+    }
+  ],
+  "keyframes": [
+    {
+      "frame": 0,
+      "file": "reviews/t01/frame-000.png",
+      "pngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.9
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23430760204792023
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6662287712097168,
+            0.3745584487915039
+          ]
+        },
+        "frame": 0,
+        "localSeconds": 0,
+        "sourceSeconds": 58,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5589,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4772
+        },
+        "maximumChannel": 242,
+        "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    },
+    {
+      "frame": 36,
+      "file": "reviews/t01/frame-036.png",
+      "pngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.84
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.2362290918827057
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6683636903762817,
+            0.3745584487915039
+          ]
+        },
+        "frame": 36,
+        "localSeconds": 0.6,
+        "sourceSeconds": 58.6,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5522,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4822
+        },
+        "maximumChannel": 243,
+        "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    },
+    {
+      "frame": 71,
+      "file": "reviews/t01/frame-071.png",
+      "pngSha256": "838bc576b5ef29cc4d1822b989162fe0a7d1c9345e1589f21418eb92d825c70c",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.06,
+          0.22,
+          10.781666666666666
+        ],
+        "bounds": {
+          "min": [
+            -0.9848574995994568,
+            -2.181666612625122,
+            -0.23000000417232513
+          ],
+          "max": [
+            0.9747899770736694,
+            1.6605544090270996,
+            0.3745584487915039
+          ]
+        },
+        "frame": 71,
+        "localSeconds": 1.1833333333333333,
+        "sourceSeconds": 59.18333333333333,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5548,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4742
+        },
+        "maximumChannel": 240,
+        "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      }
+    }
+  ],
+  "repeatOrder": [
+    71,
+    0,
+    36,
+    0,
+    71,
+    36
+  ],
+  "repeatedFrames": [
+    {
+      "frame": 71,
+      "pngSha256": "838bc576b5ef29cc4d1822b989162fe0a7d1c9345e1589f21418eb92d825c70c",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5548,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4742
+        },
+        "maximumChannel": 240,
+        "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 0,
+      "pngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5589,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4772
+        },
+        "maximumChannel": 242,
+        "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 36,
+      "pngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5522,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4822
+        },
+        "maximumChannel": 243,
+        "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 0,
+      "pngSha256": "35a599eb07c0e055c3c89e8218c1cd079f7192cb7815e7843b13380af0ca1ade",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5589,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4772
+        },
+        "maximumChannel": 242,
+        "rawPixelSha256": "47cf96b7bf264f8fea938bec5a21eaa6e23f529ceef96cf5dd230dea04bfacfc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 71,
+      "pngSha256": "838bc576b5ef29cc4d1822b989162fe0a7d1c9345e1589f21418eb92d825c70c",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5548,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4742
+        },
+        "maximumChannel": 240,
+        "rawPixelSha256": "53c0739a18a6c4ec2b6991911c3fd37604e8929dcb9a67c210a2986d6af408d6",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 36,
+      "pngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "nonBlackPixels": 518400,
+        "pixelsAtLeast8": 518400,
+        "brightPixelsAtLeast64": 5522,
+        "centralSubjectRegion": {
+          "coordinateSystem": "canvas top-left; observation only, not visual acceptance",
+          "xMin": 336,
+          "xMaxExclusive": 624,
+          "yMin": 108,
+          "yMaxExclusive": 486,
+          "brightPixelsAtLeast64": 4822
+        },
+        "maximumChannel": 243,
+        "rawPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+        "method": "WebGL readPixels immediately after awaited renderFrame"
+      },
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    }
+  ],
+  "seedRestoration": [
+    {
+      "frame": 36,
+      "alternativeSeed": 0,
+      "alternativePixelSha256": "0de8f0757bbd48e948bdec56eface1ad8c822ece4493f893186685820ff530f0",
+      "restoredDefaultSeed": 958639806,
+      "restoredPngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+      "restoredPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 36,
+      "alternativeSeed": 4294967295,
+      "alternativePixelSha256": "29db7e1d28e7a4ee63e5fd09936bdf76cbad82e587d0f5ad3ea7ec4b6ac231dd",
+      "restoredDefaultSeed": 958639806,
+      "restoredPngSha256": "fb0f8b055a449eb30e11a205ab3d7ea6174d8d5560ee4dd11fc06c2fa84787e3",
+      "restoredPixelSha256": "a277dbd0b27e65ba1c7d21d002013475ff9fdd7d23df439b3bf1b93e48d010dc",
+      "pngHashMatches": true,
+      "pixelHashMatches": true,
+      "snapshotMatches": true
+    }
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "fatalErrors": [],
+  "limitations": [
+    "Engineering checks do not establish artistic acceptance, lyric alignment, or beat alignment.",
+    "Pixel reproducibility is tested only in this browser, dependency, and GPU environment.",
+    "These are three canvas keyframes, not a 900-frame sequence or a video.",
+    "System font fallback selection is not fully exposed by browser font APIs; declared families and actual environment are recorded."
+  ]
+}
