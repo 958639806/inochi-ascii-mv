@@ -1,0 +1,5352 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "startedAt": "2026-10-11T03:20:12.832Z",
+  "completedAt": "2026-10-11T03:20:18.237Z",
+  "url": "http://127.0.0.1:4173",
+  "seed": 958639806,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "channel": "msedge",
+    "headless": true,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "browserVersion": "155.0.4283.45",
+    "playwright": "1.64.0",
+    "sceneSourceSha256": "420e06404f6d2011eb2de31551d8da89d5399353e1d1b57b16ceafa93a448e0c",
+    "atlasFontStackFromSource": "\"Cascadia Mono\", Consolas, \"Courier New\", monospace",
+    "browser": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+      "platform": "Win32",
+      "devicePixelRatio": 1,
+      "fonts": {
+        "status": "loaded",
+        "canvasComputedFamily": "\"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "faces": []
+      },
+      "gpu": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "vendor": "WebKit",
+        "renderer": "WebKit WebGL",
+        "unmaskedVendor": "Google Inc. (AMD)",
+        "unmaskedRenderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "contextAttributes": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "default",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": true,
+          "stencil": false,
+          "xrCompatible": false
+        }
+      },
+      "canvas": {
+        "width": 960,
+        "height": 540,
+        "cssWidth": 960,
+        "cssHeight": 540
+      },
+      "audio": {
+        "preload": "none",
+        "paused": true
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "configuration contains the 24 shot start/middle/end review frames",
+      "passed": true,
+      "details": {
+        "reviewFrames": [
+          0,
+          36,
+          71,
+          72,
+          111,
+          149,
+          150,
+          195,
+          239,
+          240,
+          285,
+          329,
+          330,
+          375,
+          419,
+          420,
+          495,
+          569,
+          570,
+          639,
+          707,
+          708,
+          804,
+          899
+        ],
+        "shotFrames": [
+          0,
+          36,
+          71,
+          72,
+          111,
+          149,
+          150,
+          195,
+          239,
+          240,
+          285,
+          329,
+          330,
+          375,
+          419,
+          420,
+          495,
+          569,
+          570,
+          639,
+          707,
+          708,
+          804,
+          899
+        ]
+      }
+    },
+    {
+      "name": "local preview page loads",
+      "passed": true,
+      "details": {
+        "httpStatus": 200
+      }
+    },
+    {
+      "name": "canvas backing and displayed dimensions are 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "cssWidth": 960,
+        "cssHeight": 540
+      }
+    },
+    {
+      "name": "audio is not automatically played or preloaded",
+      "passed": true,
+      "details": {
+        "preload": "none",
+        "paused": true
+      }
+    },
+    {
+      "name": "frame 0: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.25,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -1.0181877613067627,
+              -2.181666612625122,
+              -0.2374163717031479
+            ],
+            "max": [
+              1.164778232574463,
+              1.7341816425323486,
+              0.4049745500087738
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 0: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 0: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5295,
+        "centralBrightPixels": 5046,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 252,
+          "xMax": 706,
+          "yMin": 57,
+          "yMax": 449,
+          "width": 455,
+          "height": 393
+        },
+        "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 36: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.215,
+            10.55
+          ],
+          "bounds": {
+            "min": [
+              -1.003241777420044,
+              -2.181666612625122,
+              -0.23898892104625702
+            ],
+            "max": [
+              1.2171969413757324,
+              1.7445755004882812,
+              0.4118109941482544
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 36: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 36: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5569,
+        "centralBrightPixels": 5314,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 253,
+          "xMax": 712,
+          "yMin": 98,
+          "yMax": 429,
+          "width": 460,
+          "height": 332
+        },
+        "rawPixelSha256": "ff7f5654dc8915db6e81ae0a634da79c6a1ae0228b45a99f1e40fed14dfab4cb",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 71: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.18004013417352538,
+            10.200401341735253
+          ],
+          "bounds": {
+            "min": [
+              -0.8635813593864441,
+              -2.181666612625122,
+              -0.22240100800991058
+            ],
+            "max": [
+              0.9113069772720337,
+              1.605588436126709,
+              0.3745584487915039
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 71,
+          "localSeconds": 1.1833333333333333,
+          "sourceSeconds": 59.18333333333333,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 71: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 71: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5996,
+        "centralBrightPixels": 5695,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 249,
+          "xMax": 719,
+          "yMin": 76,
+          "yMax": 462,
+          "width": 471,
+          "height": 387
+        },
+        "rawPixelSha256": "7ed37d812d362c3b1b0cb981056045a5d3e8cfa4786d9477cd0b839d4b5b25f3",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 72: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S02",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.18,
+            10.2
+          ],
+          "bounds": {
+            "min": [
+              -0.8628956079483032,
+              -2.181666612625122,
+              -0.22199521958827972
+            ],
+            "max": [
+              0.9043676257133484,
+              1.6018520593643188,
+              0.3745584487915039
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 72,
+          "localSeconds": 1.2,
+          "sourceSeconds": 59.2,
+          "shotId": "S02",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 72: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 72: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6033,
+        "centralBrightPixels": 5730,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 249,
+          "xMax": 719,
+          "yMin": 76,
+          "yMax": 462,
+          "width": 471,
+          "height": 387
+        },
+        "rawPixelSha256": "9ee7533da63a2ef538ea00e3118889066f3610e4e7c85cb071d930c601317533",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 111: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S02",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.09940801903605462,
+            0.04999999999999999,
+            9.8
+          ],
+          "bounds": {
+            "min": [
+              -0.8400242924690247,
+              -2.181666612625122,
+              -0.19070596992969513
+            ],
+            "max": [
+              0.49142134189605713,
+              1.002098798751831,
+              0.9037725329399109
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 111,
+          "localSeconds": 1.85,
+          "sourceSeconds": 59.85,
+          "shotId": "S02",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 111: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 111: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6025,
+        "centralBrightPixels": 5602,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 709,
+          "yMin": 90,
+          "yMax": 465,
+          "width": 470,
+          "height": 376
+        },
+        "rawPixelSha256": "7eac60a622e87a8211b9223e7733903faf636e8f8da2dca3ca7d4cceacb1871a",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 149: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S02",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.09999808132660748,
+            -0.07987289064212144,
+            9.40039110571655
+          ],
+          "bounds": {
+            "min": [
+              -0.833812415599823,
+              -2.181666612625122,
+              -0.19070596992969513
+            ],
+            "max": [
+              0.49142134189605713,
+              1.0543512105941772,
+              0.9653264284133911
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 149,
+          "localSeconds": 2.4833333333333334,
+          "sourceSeconds": 60.483333333333334,
+          "shotId": "S02",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 149: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 149: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6748,
+        "centralBrightPixels": 6522,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 706,
+          "yMin": 59,
+          "yMax": 466,
+          "width": 467,
+          "height": 408
+        },
+        "rawPixelSha256": "51688de900033a922554f227a5404685549da5078829fe5b69f7becdf26ed981",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 150: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S03",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            -0.08,
+            9.4
+          ],
+          "bounds": {
+            "min": [
+              -0.8318074941635132,
+              -2.181666612625122,
+              -0.19070596992969513
+            ],
+            "max": [
+              0.49142134189605713,
+              1.055342674255371,
+              0.9662290811538696
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 150,
+          "localSeconds": 2.5,
+          "sourceSeconds": 60.5,
+          "shotId": "S03",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 150: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 150: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6749,
+        "centralBrightPixels": 6524,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 706,
+          "yMin": 59,
+          "yMax": 466,
+          "width": 467,
+          "height": 408
+        },
+        "rawPixelSha256": "73ca03e4c415f29385f694e600a727509f62dbdd111745b7bff19531120aa38c",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 195: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S03",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.39611923590302467,
+            -0.09,
+            8.9
+          ],
+          "bounds": {
+            "min": [
+              -2.101222276687622,
+              -2.181666612625122,
+              -0.31857678294181824
+            ],
+            "max": [
+              2.359203815460205,
+              1.5792232751846313,
+              0.3745584487915039
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 195,
+          "localSeconds": 3.25,
+          "sourceSeconds": 61.25,
+          "shotId": "S03",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 195: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 195: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 10913,
+        "centralBrightPixels": 9691,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 489,
+          "width": 480,
+          "height": 435
+        },
+        "rawPixelSha256": "3504081d2843d24fcfa123c5625cb48752da1a6a39972dc685c92efd463d4706",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 239: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S03",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.6997714149729363,
+            -0.0999926474622771,
+            8.400367626886146
+          ],
+          "bounds": {
+            "min": [
+              -2.323580026626587,
+              -2.181666612625122,
+              -0.4318816661834717
+            ],
+            "max": [
+              2.1568145751953125,
+              1.5037585496902466,
+              0.3745584487915039
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 239,
+          "localSeconds": 3.9833333333333334,
+          "sourceSeconds": 61.983333333333334,
+          "shotId": "S03",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 239: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 239: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 13978,
+        "centralBrightPixels": 11669,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 716,
+          "yMin": 54,
+          "yMax": 501,
+          "width": 477,
+          "height": 448
+        },
+        "rawPixelSha256": "89f5f7dfcdf2eecd147c574837bbdf37d28f058feea602b2857c6a94853adcae",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 240: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.7,
+            -0.1,
+            8.4
+          ],
+          "bounds": {
+            "min": [
+              -2.327314853668213,
+              -2.181666612625122,
+              -0.4316909909248352
+            ],
+            "max": [
+              2.1492223739624023,
+              1.5043060779571533,
+              0.3745584487915039
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 17,
+          "frame": 240,
+          "localSeconds": 4,
+          "sourceSeconds": 62,
+          "shotId": "S04",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 240: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 240: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 15273,
+        "centralBrightPixels": 12895,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 501,
+          "width": 480,
+          "height": 448
+        },
+        "rawPixelSha256": "028f3f5afea58fe30207f6eb5a87c43bc63aa9378e30c5b756079cb41fe3059e",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 285: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.19308238688739948,
+            0.061010742187499994,
+            6.192138671875
+          ],
+          "bounds": {
+            "min": [
+              -3.1485729217529297,
+              -3.987250566482544,
+              -3.328598737716675
+            ],
+            "max": [
+              3.2608437538146973,
+              3.083012342453003,
+              0.10613424330949783
+            ]
+          },
+          "bodyMode": "fractured",
+          "dispersion": 0.648,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 5,
+          "frame": 285,
+          "localSeconds": 4.75,
+          "sourceSeconds": 62.75,
+          "shotId": "S04",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 285: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 285: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 9274,
+        "centralBrightPixels": 7289,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 329: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.040203033206416064,
+            0.14988444010416668,
+            5.500898799189815
+          ],
+          "bounds": {
+            "min": [
+              -4.272940635681152,
+              -4.544858932495117,
+              -5.278637409210205
+            ],
+            "max": [
+              4.738487243652344,
+              3.8699045181274414,
+              -0.06124551221728325
+            ]
+          },
+          "bodyMode": "fractured",
+          "dispersion": 1,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 9,
+          "frame": 329,
+          "localSeconds": 5.483333333333333,
+          "sourceSeconds": 63.483333333333334,
+          "shotId": "S04",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 329: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 329: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 8869,
+        "centralBrightPixels": 4424,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "72b3d38e148749a3ec6106e70839b753839e723075ad0616f2bd02a63b688a16",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 330: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S05",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.04,
+            0.15,
+            5.5
+          ],
+          "bounds": {
+            "min": [
+              -4.264370918273926,
+              -4.527334690093994,
+              -5.282304286956787
+            ],
+            "max": [
+              4.742090702056885,
+              3.8526530265808105,
+              -0.06124551221728325
+            ]
+          },
+          "bodyMode": "core",
+          "dispersion": 1,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 9,
+          "frame": 330,
+          "localSeconds": 5.5,
+          "sourceSeconds": 63.5,
+          "shotId": "S05",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 330: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 330: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 8871,
+        "centralBrightPixels": 4407,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "00c2bfb2d63fde7e670cf07c75a7c1f4d4b4e40ea436a0f9cc0e73d73615ef83",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 375: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S05",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.03875026240944862,
+            0.1,
+            6
+          ],
+          "bounds": {
+            "min": [
+              -4.137526035308838,
+              -3.4264025688171387,
+              -5.4473042488098145
+            ],
+            "max": [
+              4.705846786499023,
+              3.23982572555542,
+              -0.06124551221728325
+            ]
+          },
+          "bodyMode": "core",
+          "dispersion": 1,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 7,
+          "frame": 375,
+          "localSeconds": 6.25,
+          "sourceSeconds": 64.25,
+          "shotId": "S05",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 375: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 375: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5927,
+        "centralBrightPixels": 3445,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 507,
+          "width": 480,
+          "height": 454
+        },
+        "rawPixelSha256": "dce54b1a188aed1e9bd96423d6d1d12b3cdc5fed94bab3a3493d1bfaffb18e0b",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 419: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S05",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.03999935844722845,
+            0.05003676268861454,
+            6.4996323731138546
+          ],
+          "bounds": {
+            "min": [
+              -3.750912666320801,
+              -2.1615207195281982,
+              -5.60863733291626
+            ],
+            "max": [
+              4.28568172454834,
+              2.7141332626342773,
+              -0.06124551221728325
+            ]
+          },
+          "bodyMode": "core",
+          "dispersion": 1,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 7,
+          "frame": 419,
+          "localSeconds": 6.983333333333333,
+          "sourceSeconds": 64.98333333333333,
+          "shotId": "S05",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 419: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 419: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5448,
+        "centralBrightPixels": 4134,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 500,
+          "width": 480,
+          "height": 446
+        },
+        "rawPixelSha256": "a15dc0d4acc4eddb9fe20dcf503692d9f1614a1737a13ad0ee379780994f7c7b",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 420: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.04,
+            0.05,
+            6.5
+          ],
+          "bounds": {
+            "min": [
+              -3.7474541664123535,
+              -2.140651226043701,
+              -5.612304210662842
+            ],
+            "max": [
+              4.2650532722473145,
+              2.703939914703369,
+              -0.06124551221728325
+            ]
+          },
+          "bodyMode": "reforming",
+          "dispersion": 1,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 7,
+          "frame": 420,
+          "localSeconds": 7,
+          "sourceSeconds": 65,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 420: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 420: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5527,
+        "centralBrightPixels": 4150,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 500,
+          "width": 480,
+          "height": 446
+        },
+        "rawPixelSha256": "35d39bbb0443978398e530f0f2dc399cbe526735e04c3fe1e7b1eeffc29ccc94",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 495: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.21650140187723882,
+            -0.30000000000000004,
+            5
+          ],
+          "bounds": {
+            "min": [
+              -1.481677532196045,
+              -1.3740731477737427,
+              -4.5912933349609375
+            ],
+            "max": [
+              1.1735936403274536,
+              1.1102261543273926,
+              -0.7965387105941772
+            ]
+          },
+          "bodyMode": "reforming",
+          "dispersion": 0.3723630905151367,
+          "reassembly": 0.6276369094848633,
+          "rootPosition": [
+            0.175,
+            0,
+            -1.5
+          ],
+          "drawCalls": 21,
+          "frame": 495,
+          "localSeconds": 8.25,
+          "sourceSeconds": 66.25,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 495: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 495: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 11740,
+        "centralBrightPixels": 9936,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 56,
+          "yMax": 512,
+          "width": 480,
+          "height": 457
+        },
+        "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 569: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.3999503355984182,
+            -0.6499070814814815,
+            3.5003982222222225
+          ],
+          "bounds": {
+            "min": [
+              -1.836532473564148,
+              -2.218510150909424,
+              -3.5054497718811035
+            ],
+            "max": [
+              2.505655527114868,
+              1.6582235097885132,
+              -2.288752317428589
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.3499535407407407,
+            0,
+            -2.9996017777777775
+          ],
+          "drawCalls": 17,
+          "frame": 569,
+          "localSeconds": 9.483333333333333,
+          "sourceSeconds": 67.48333333333333,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 569: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 569: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 14413,
+        "centralBrightPixels": 11897,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "9cacb0e690071c0b5f373c71db9cfb71e707a339fc7c06f041105e5aa77bf9ce",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 570: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.4,
+            -0.65,
+            3.5
+          ],
+          "bounds": {
+            "min": [
+              -1.8481863737106323,
+              -2.2165956497192383,
+              -3.422818183898926
+            ],
+            "max": [
+              2.4981529712677,
+              1.6620676517486572,
+              -2.3700129985809326
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.35,
+            0,
+            -3
+          ],
+          "drawCalls": 17,
+          "frame": 570,
+          "localSeconds": 9.5,
+          "sourceSeconds": 67.5,
+          "shotId": "S07",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 570: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 570: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 14269,
+        "centralBrightPixels": 11794,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "eccc23a690ee04d068c04a5fc00044b1f0935f4423714e5c93ca09bae175c946",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 639: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.472467636987567,
+            -0.2,
+            2.6
+          ],
+          "bounds": {
+            "min": [
+              -1.1111358404159546,
+              -2.1833741664886475,
+              -4.123955249786377
+            ],
+            "max": [
+              1.5397800207138062,
+              1.5288136005401611,
+              -2.287653923034668
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.425,
+            0,
+            -3.3
+          ],
+          "drawCalls": 9,
+          "frame": 639,
+          "localSeconds": 10.65,
+          "sourceSeconds": 68.65,
+          "shotId": "S07",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 639: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 639: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 15172,
+        "centralBrightPixels": 14066,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 718,
+          "yMin": 55,
+          "yMax": 512,
+          "width": 475,
+          "height": 458
+        },
+        "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 707: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5499760753890217,
+            0.249858907975124,
+            1.700282184049752
+          ],
+          "bounds": {
+            "min": [
+              -0.38122040033340454,
+              -2.218144416809082,
+              -4.130643844604492
+            ],
+            "max": [
+              1.546104907989502,
+              1.5946850776672363,
+              -2.864943027496338
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.49997648466252065,
+            0,
+            -3.5999059386500827
+          ],
+          "drawCalls": 9,
+          "frame": 707,
+          "localSeconds": 11.783333333333333,
+          "sourceSeconds": 69.78333333333333,
+          "shotId": "S07",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 707: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 707: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 17395,
+        "centralBrightPixels": 15797,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 716,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 473,
+          "height": 455
+        },
+        "rawPixelSha256": "57ed6cb93f5b27d994255fe01cd9fdd3aeaf19873909a38800c2febe33bd7f19",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 708: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.55,
+            0.25,
+            1.7
+          ],
+          "bounds": {
+            "min": [
+              -0.3854076564311981,
+              -2.217717409133911,
+              -4.145497798919678
+            ],
+            "max": [
+              1.5563979148864746,
+              1.5986212491989136,
+              -2.850766181945801
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 708,
+          "localSeconds": 11.8,
+          "sourceSeconds": 69.8,
+          "shotId": "S08",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 708: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 708: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 17375,
+        "centralBrightPixels": 15754,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 701,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 458,
+          "height": 455
+        },
+        "rawPixelSha256": "f8b703d708298e1c51fc75ac70b839ad39db2c5d95432571b9e85e2f04ceed0f",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 804: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5744737946987152,
+            0.55,
+            3.75
+          ],
+          "bounds": {
+            "min": [
+              -0.42470887303352356,
+              -2.181666612625122,
+              -3.8004720211029053
+            ],
+            "max": [
+              1.3310699462890625,
+              1.5544772148132324,
+              -3.2194368839263916
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 804,
+          "localSeconds": 13.4,
+          "sourceSeconds": 71.4,
+          "shotId": "S08",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 804: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 804: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 9679,
+        "centralBrightPixels": 9185,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 262,
+          "xMax": 712,
+          "yMin": 71,
+          "yMax": 512,
+          "width": 451,
+          "height": 442
+        },
+        "rawPixelSha256": "7937de11b4eeda7678639731b9c551b8cd2b831228b9bc63b055428ce423310d",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "frame 899: implemented, timing, finite state, new motion evidence",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5999958746724405,
+            0.8499513414171007,
+            5.799667499683522
+          ],
+          "bounds": {
+            "min": [
+              -0.5175371766090393,
+              -2.181666612625122,
+              -3.8246724605560303
+            ],
+            "max": [
+              1.6176552772521973,
+              1.695928931236267,
+              -3.191887140274048
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 899,
+          "localSeconds": 14.983333333333333,
+          "sourceSeconds": 72.98333333333333,
+          "shotId": "S08",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "frame 899: actual canvas PNG is 960x540",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "name": "frame 899: bright rendered pixels exist",
+      "passed": true,
+      "details": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5831,
+        "centralBrightPixels": 5704,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 492,
+          "width": 480,
+          "height": 438
+        },
+        "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "name": "character count and IDs remain fixed in every shot",
+      "passed": true,
+      "details": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90"
+      }
+    },
+    {
+      "name": "all 16 mandatory boundary frames were rendered and are finite",
+      "passed": true,
+      "details": {
+        "boundaryFrames": [
+          0,
+          71,
+          72,
+          149,
+          150,
+          239,
+          240,
+          329,
+          330,
+          419,
+          420,
+          569,
+          570,
+          707,
+          708,
+          899
+        ]
+      }
+    },
+    {
+      "name": "S01: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 0,
+            "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d"
+          },
+          {
+            "frame": 36,
+            "pngSha256": "ed756ae16734e18d5abc750f9d04d2c6fe3d8d2e4d3d65126ea1b21a1fbeef22"
+          },
+          {
+            "frame": 71,
+            "pngSha256": "e6bebb61e89b6b340cd1d09bc36952e6a73b3b9cda0bbc41c1b277315563a4bb"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S02: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 72,
+            "pngSha256": "8dd76506ba51304606f7be4ca494f7ca4d8d1ed128a3e2284117314e2993e6e4"
+          },
+          {
+            "frame": 111,
+            "pngSha256": "1093ad94ba2d3d097dce1acde9f1735cc50ff0b01a883b297b173497073f58c4"
+          },
+          {
+            "frame": 149,
+            "pngSha256": "f387018262b98f9bb1e65773460edfcba0afd0344cb3ccd20dddd61fc057670e"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S03: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 150,
+            "pngSha256": "d6caec331eb51c92be816f9b28ddf426528d6b9892ad0ac8a7451cf2d7e23572"
+          },
+          {
+            "frame": 195,
+            "pngSha256": "06d92870dfe91628401a035a8dd230a49cf8b4c74a3da00bd76d041f23fb0ff6"
+          },
+          {
+            "frame": 239,
+            "pngSha256": "6f51c897959c13d726bbd798d580ac943b074ee9543fc2e22633f44961326abf"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S04: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 240,
+            "pngSha256": "c9ab0ac11ff84caf68874ecbc33eb667b090f00f15a325286c1f94d3387063b5"
+          },
+          {
+            "frame": 285,
+            "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32"
+          },
+          {
+            "frame": 329,
+            "pngSha256": "497289461ab54d706ba134edd3532bbde811c744f24edfc0b4a12b7c7b86eeec"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S05: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 330,
+            "pngSha256": "72b49609d97b405d5f7319531b71a29eef8b8e7ea1cfd0819ddc6bc4a07fa182"
+          },
+          {
+            "frame": 375,
+            "pngSha256": "a26db2bb9c7f6469901ee90b8cd604b91b9736be39a8bff3a5694b8347660ff8"
+          },
+          {
+            "frame": 419,
+            "pngSha256": "0e9261b3bf670c5b6460d732a650896ed5324ae730ab9c56835f4f7d1e1cab8e"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S06: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 420,
+            "pngSha256": "c598bdbcdc9c19dafd00d548beae66f9703393cd57a4c84a5bd9cb69e7ed0797"
+          },
+          {
+            "frame": 495,
+            "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a"
+          },
+          {
+            "frame": 569,
+            "pngSha256": "f8429dd3c3428e51b8ab7abfaf8e5d3132d4e472ff6ae1a7fa8755725d5e4a39"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S07: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 570,
+            "pngSha256": "a8433c3356efd4aa4e17d7a7b401c84a3dc18043c4078eb8fcbdbd51c5402d21"
+          },
+          {
+            "frame": 639,
+            "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34"
+          },
+          {
+            "frame": 707,
+            "pngSha256": "5bb9806f136c8b4ed7252a8b722d3e3f39a530227d28affae75a2dd0800111a2"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S08: start/middle/end PNGs change",
+      "passed": true,
+      "details": {
+        "hashes": [
+          {
+            "frame": 708,
+            "pngSha256": "7543342fa677ca76274f262a824f604bcbd0c662de6a1f31a529cbd26da5e12f"
+          },
+          {
+            "frame": 804,
+            "pngSha256": "e9fcc563df0bb293c33d1ea80ae0aebb42c1e7a1cf6b72bdc8421b2bf6153bf6"
+          },
+          {
+            "frame": 899,
+            "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683"
+          }
+        ],
+        "artisticAcceptance": "NOT_TESTED"
+      }
+    },
+    {
+      "name": "S04 reaches dispersion above 0.8",
+      "passed": true,
+      "details": {
+        "samples": [
+          {
+            "frame": 240,
+            "bodyMode": "intact",
+            "dispersion": 0
+          },
+          {
+            "frame": 285,
+            "bodyMode": "fractured",
+            "dispersion": 0.648
+          },
+          {
+            "frame": 329,
+            "bodyMode": "fractured",
+            "dispersion": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "S06 last frame reaches reassembly above 0.9",
+      "passed": true,
+      "details": {
+        "frame": 569,
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.3999503355984182,
+            -0.6499070814814815,
+            3.5003982222222225
+          ],
+          "bounds": {
+            "min": [
+              -1.836532473564148,
+              -2.218510150909424,
+              -3.5054497718811035
+            ],
+            "max": [
+              2.505655527114868,
+              1.6582235097885132,
+              -2.288752317428589
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.3499535407407407,
+            0,
+            -2.9996017777777775
+          ],
+          "drawCalls": 17,
+          "frame": 569,
+          "localSeconds": 9.483333333333333,
+          "sourceSeconds": 67.48333333333333,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "S07 frame 570: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.4,
+            -0.65,
+            3.5
+          ],
+          "bounds": {
+            "min": [
+              -1.8481863737106323,
+              -2.2165956497192383,
+              -3.422818183898926
+            ],
+            "max": [
+              2.4981529712677,
+              1.6620676517486572,
+              -2.3700129985809326
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.35,
+            0,
+            -3
+          ],
+          "drawCalls": 17,
+          "frame": 570,
+          "localSeconds": 9.5,
+          "sourceSeconds": 67.5,
+          "shotId": "S07",
+          "implemented": true
+        },
+        "centralBrightPixels": 11794,
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "S07 frame 639: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.472467636987567,
+            -0.2,
+            2.6
+          ],
+          "bounds": {
+            "min": [
+              -1.1111358404159546,
+              -2.1833741664886475,
+              -4.123955249786377
+            ],
+            "max": [
+              1.5397800207138062,
+              1.5288136005401611,
+              -2.287653923034668
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.425,
+            0,
+            -3.3
+          ],
+          "drawCalls": 9,
+          "frame": 639,
+          "localSeconds": 10.65,
+          "sourceSeconds": 68.65,
+          "shotId": "S07",
+          "implemented": true
+        },
+        "centralBrightPixels": 14066,
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 718,
+          "yMin": 55,
+          "yMax": 512,
+          "width": 475,
+          "height": 458
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "S07 frame 707: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5499760753890217,
+            0.249858907975124,
+            1.700282184049752
+          ],
+          "bounds": {
+            "min": [
+              -0.38122040033340454,
+              -2.218144416809082,
+              -4.130643844604492
+            ],
+            "max": [
+              1.546104907989502,
+              1.5946850776672363,
+              -2.864943027496338
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.49997648466252065,
+            0,
+            -3.5999059386500827
+          ],
+          "drawCalls": 9,
+          "frame": 707,
+          "localSeconds": 11.783333333333333,
+          "sourceSeconds": 69.78333333333333,
+          "shotId": "S07",
+          "implemented": true
+        },
+        "centralBrightPixels": 15797,
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 716,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 473,
+          "height": 455
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "S08 frame 708: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.55,
+            0.25,
+            1.7
+          ],
+          "bounds": {
+            "min": [
+              -0.3854076564311981,
+              -2.217717409133911,
+              -4.145497798919678
+            ],
+            "max": [
+              1.5563979148864746,
+              1.5986212491989136,
+              -2.850766181945801
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 708,
+          "localSeconds": 11.8,
+          "sourceSeconds": 69.8,
+          "shotId": "S08",
+          "implemented": true
+        },
+        "centralBrightPixels": 15754,
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 701,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 458,
+          "height": 455
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "S08 frame 804: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5744737946987152,
+            0.55,
+            3.75
+          ],
+          "bounds": {
+            "min": [
+              -0.42470887303352356,
+              -2.181666612625122,
+              -3.8004720211029053
+            ],
+            "max": [
+              1.3310699462890625,
+              1.5544772148132324,
+              -3.2194368839263916
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 804,
+          "localSeconds": 13.4,
+          "sourceSeconds": 71.4,
+          "shotId": "S08",
+          "implemented": true
+        },
+        "centralBrightPixels": 9185,
+        "centralBrightBoundingBox": {
+          "xMin": 262,
+          "xMax": 712,
+          "yMin": 71,
+          "yMax": 512,
+          "width": 451,
+          "height": 442
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "S08 frame 899: nonempty character and central presence proxy",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5999958746724405,
+            0.8499513414171007,
+            5.799667499683522
+          ],
+          "bounds": {
+            "min": [
+              -0.5175371766090393,
+              -2.181666612625122,
+              -3.8246724605560303
+            ],
+            "max": [
+              1.6176552772521973,
+              1.695928931236267,
+              -3.191887140274048
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 899,
+          "localSeconds": 14.983333333333333,
+          "sourceSeconds": 72.98333333333333,
+          "shotId": "S08",
+          "implemented": true
+        },
+        "centralBrightPixels": 5704,
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 492,
+          "width": 480,
+          "height": 438
+        },
+        "interpretation": "Engineering proxy only; bright panels may contribute; director visual review is still required."
+      }
+    },
+    {
+      "name": "frame 900 is rejected without an unhandled page error",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "error": "RangeError: Output frame must be an integer from 0 to 899; received 900."
+      }
+    },
+    {
+      "name": "repeat frame 285: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.19308238688739948,
+            0.061010742187499994,
+            6.192138671875
+          ],
+          "bounds": {
+            "min": [
+              -3.1485729217529297,
+              -3.987250566482544,
+              -3.328598737716675
+            ],
+            "max": [
+              3.2608437538146973,
+              3.083012342453003,
+              0.10613424330949783
+            ]
+          },
+          "bodyMode": "fractured",
+          "dispersion": 0.648,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 5,
+          "frame": 285,
+          "localSeconds": 4.75,
+          "sourceSeconds": 62.75,
+          "shotId": "S04",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 285: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 285,
+        "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32",
+        "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 285: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S04",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.19308238688739948,
+            0.061010742187499994,
+            6.192138671875
+          ],
+          "bounds": {
+            "min": [
+              -3.1485729217529297,
+              -3.987250566482544,
+              -3.328598737716675
+            ],
+            "max": [
+              3.2608437538146973,
+              3.083012342453003,
+              0.10613424330949783
+            ]
+          },
+          "bodyMode": "fractured",
+          "dispersion": 0.648,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 5,
+          "frame": 285,
+          "localSeconds": 4.75,
+          "sourceSeconds": 62.75,
+          "shotId": "S04",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 285: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 285,
+        "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32",
+        "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 0: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.25,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -1.0181877613067627,
+              -2.181666612625122,
+              -0.2374163717031479
+            ],
+            "max": [
+              1.164778232574463,
+              1.7341816425323486,
+              0.4049745500087738
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 0: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 0,
+        "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d",
+        "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 639: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.472467636987567,
+            -0.2,
+            2.6
+          ],
+          "bounds": {
+            "min": [
+              -1.1111358404159546,
+              -2.1833741664886475,
+              -4.123955249786377
+            ],
+            "max": [
+              1.5397800207138062,
+              1.5288136005401611,
+              -2.287653923034668
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.425,
+            0,
+            -3.3
+          ],
+          "drawCalls": 9,
+          "frame": 639,
+          "localSeconds": 10.65,
+          "sourceSeconds": 68.65,
+          "shotId": "S07",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 639: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 639,
+        "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34",
+        "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 495: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.21650140187723882,
+            -0.30000000000000004,
+            5
+          ],
+          "bounds": {
+            "min": [
+              -1.481677532196045,
+              -1.3740731477737427,
+              -4.5912933349609375
+            ],
+            "max": [
+              1.1735936403274536,
+              1.1102261543273926,
+              -0.7965387105941772
+            ]
+          },
+          "bodyMode": "reforming",
+          "dispersion": 0.3723630905151367,
+          "reassembly": 0.6276369094848633,
+          "rootPosition": [
+            0.175,
+            0,
+            -1.5
+          ],
+          "drawCalls": 21,
+          "frame": 495,
+          "localSeconds": 8.25,
+          "sourceSeconds": 66.25,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 495: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 495,
+        "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a",
+        "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 899: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5999958746724405,
+            0.8499513414171007,
+            5.799667499683522
+          ],
+          "bounds": {
+            "min": [
+              -0.5175371766090393,
+              -2.181666612625122,
+              -3.8246724605560303
+            ],
+            "max": [
+              1.6176552772521973,
+              1.695928931236267,
+              -3.191887140274048
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 899,
+          "localSeconds": 14.983333333333333,
+          "sourceSeconds": 72.98333333333333,
+          "shotId": "S08",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 899: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 899,
+        "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683",
+        "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 0: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S01",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.25,
+            10.9
+          ],
+          "bounds": {
+            "min": [
+              -1.0181877613067627,
+              -2.181666612625122,
+              -0.2374163717031479
+            ],
+            "max": [
+              1.164778232574463,
+              1.7341816425323486,
+              0.4049745500087738
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 0,
+          "localSeconds": 0,
+          "sourceSeconds": 58,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 0: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 0,
+        "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d",
+        "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 899: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S08",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.5999958746724405,
+            0.8499513414171007,
+            5.799667499683522
+          ],
+          "bounds": {
+            "min": [
+              -0.5175371766090393,
+              -2.181666612625122,
+              -3.8246724605560303
+            ],
+            "max": [
+              1.6176552772521973,
+              1.695928931236267,
+              -3.191887140274048
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.5,
+            0,
+            -3.6
+          ],
+          "drawCalls": 9,
+          "frame": 899,
+          "localSeconds": 14.983333333333333,
+          "sourceSeconds": 72.98333333333333,
+          "shotId": "S08",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 899: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 899,
+        "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683",
+        "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 639: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S07",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.472467636987567,
+            -0.2,
+            2.6
+          ],
+          "bounds": {
+            "min": [
+              -1.1111358404159546,
+              -2.1833741664886475,
+              -4.123955249786377
+            ],
+            "max": [
+              1.5397800207138062,
+              1.5288136005401611,
+              -2.287653923034668
+            ]
+          },
+          "bodyMode": "active",
+          "dispersion": 0,
+          "reassembly": 1,
+          "rootPosition": [
+            0.425,
+            0,
+            -3.3
+          ],
+          "drawCalls": 9,
+          "frame": 639,
+          "localSeconds": 10.65,
+          "sourceSeconds": 68.65,
+          "shotId": "S07",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 639: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 639,
+        "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34",
+        "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "repeat frame 495: finite implemented scene",
+      "passed": true,
+      "details": {
+        "expectedShot": "S06",
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.21650140187723882,
+            -0.30000000000000004,
+            5
+          ],
+          "bounds": {
+            "min": [
+              -1.481677532196045,
+              -1.3740731477737427,
+              -4.5912933349609375
+            ],
+            "max": [
+              1.1735936403274536,
+              1.1102261543273926,
+              -0.7965387105941772
+            ]
+          },
+          "bodyMode": "reforming",
+          "dispersion": 0.3723630905151367,
+          "reassembly": 0.6276369094848633,
+          "rootPosition": [
+            0.175,
+            0,
+            -1.5
+          ],
+          "drawCalls": 21,
+          "frame": 495,
+          "localSeconds": 8.25,
+          "sourceSeconds": 66.25,
+          "shotId": "S06",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "shuffled repeat frame 495: same-browser pixels and state match",
+      "passed": true,
+      "details": {
+        "frame": 495,
+        "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a",
+        "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+        "pngMatches": true,
+        "pixelsMatch": true,
+        "snapshotMatches": true
+      }
+    },
+    {
+      "name": "full-pilot loop button is enabled and labeled",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "full-pilot loop advances beyond frame 71",
+      "passed": true,
+      "details": {
+        "elapsedMs": 1422.5,
+        "frameAdvance": 85,
+        "sampledTimelineFramesPerSecond": 59.753954305799645,
+        "note": "Observed timeline advancement; not a measurement of GPU draw throughput."
+      }
+    },
+    {
+      "name": "full-pilot loop stays silent with a fixed audio clock",
+      "passed": true,
+      "details": {
+        "beforeLoop": {
+          "observedAtMs": 2923.8000000002794,
+          "frame": 149,
+          "loopButton": "循环看全段",
+          "audioPaused": true,
+          "audioTime": 0,
+          "audioError": null
+        },
+        "samples": [
+          {
+            "observedAtMs": 2954.9000000003725,
+            "frame": 0,
+            "loopButton": "停止循环",
+            "audioPaused": true,
+            "audioTime": 0,
+            "audioError": null
+          },
+          {
+            "observedAtMs": 4152.800000000279,
+            "frame": 72,
+            "loopButton": "停止循环",
+            "audioPaused": true,
+            "audioTime": 0,
+            "audioError": null
+          },
+          {
+            "observedAtMs": 4377.4000000003725,
+            "frame": 85,
+            "loopButton": "停止循环",
+            "audioPaused": true,
+            "audioTime": 0,
+            "audioError": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "renderFrame stops full-pilot looping and holds frame 36",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.1,
+            0.215,
+            10.55
+          ],
+          "bounds": {
+            "min": [
+              -1.003241777420044,
+              -2.181666612625122,
+              -0.23898892104625702
+            ],
+            "max": [
+              1.2171969413757324,
+              1.7445755004882812,
+              0.4118109941482544
+            ]
+          },
+          "bodyMode": "intact",
+          "dispersion": 0,
+          "reassembly": 0,
+          "rootPosition": [
+            0,
+            0,
+            0
+          ],
+          "drawCalls": 8,
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        },
+        "before": {
+          "observedAtMs": 4382.100000000093,
+          "frame": 36,
+          "loopButton": "循环看全段",
+          "audioPaused": true,
+          "audioTime": 0,
+          "audioError": null
+        },
+        "after": {
+          "observedAtMs": 4540,
+          "frame": 36,
+          "loopButton": "循环看全段",
+          "audioPaused": true,
+          "audioTime": 0,
+          "audioError": null
+        }
+      }
+    },
+    {
+      "name": "no unhandled JavaScript page errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no browser console errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no failed browser requests",
+      "passed": true,
+      "details": {
+        "requests": []
+      }
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "file": "reviews/pilot-v2/frame-000.png",
+      "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.1,
+          0.25,
+          10.9
+        ],
+        "bounds": {
+          "min": [
+            -1.0181877613067627,
+            -2.181666612625122,
+            -0.2374163717031479
+          ],
+          "max": [
+            1.164778232574463,
+            1.7341816425323486,
+            0.4049745500087738
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 8,
+        "frame": 0,
+        "localSeconds": 0,
+        "sourceSeconds": 58,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5295,
+        "centralBrightPixels": 5046,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 252,
+          "xMax": 706,
+          "yMin": 57,
+          "yMax": 449,
+          "width": 455,
+          "height": 393
+        },
+        "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 36,
+      "file": "reviews/pilot-v2/frame-036.png",
+      "pngSha256": "ed756ae16734e18d5abc750f9d04d2c6fe3d8d2e4d3d65126ea1b21a1fbeef22",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.1,
+          0.215,
+          10.55
+        ],
+        "bounds": {
+          "min": [
+            -1.003241777420044,
+            -2.181666612625122,
+            -0.23898892104625702
+          ],
+          "max": [
+            1.2171969413757324,
+            1.7445755004882812,
+            0.4118109941482544
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 8,
+        "frame": 36,
+        "localSeconds": 0.6,
+        "sourceSeconds": 58.6,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5569,
+        "centralBrightPixels": 5314,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 253,
+          "xMax": 712,
+          "yMin": 98,
+          "yMax": 429,
+          "width": 460,
+          "height": 332
+        },
+        "rawPixelSha256": "ff7f5654dc8915db6e81ae0a634da79c6a1ae0228b45a99f1e40fed14dfab4cb",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 71,
+      "file": "reviews/pilot-v2/frame-071.png",
+      "pngSha256": "e6bebb61e89b6b340cd1d09bc36952e6a73b3b9cda0bbc41c1b277315563a4bb",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.1,
+          0.18004013417352538,
+          10.200401341735253
+        ],
+        "bounds": {
+          "min": [
+            -0.8635813593864441,
+            -2.181666612625122,
+            -0.22240100800991058
+          ],
+          "max": [
+            0.9113069772720337,
+            1.605588436126709,
+            0.3745584487915039
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 8,
+        "frame": 71,
+        "localSeconds": 1.1833333333333333,
+        "sourceSeconds": 59.18333333333333,
+        "shotId": "S01",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5996,
+        "centralBrightPixels": 5695,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 249,
+          "xMax": 719,
+          "yMin": 76,
+          "yMax": 462,
+          "width": 471,
+          "height": 387
+        },
+        "rawPixelSha256": "7ed37d812d362c3b1b0cb981056045a5d3e8cfa4786d9477cd0b839d4b5b25f3",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 72,
+      "file": "reviews/pilot-v2/frame-072.png",
+      "pngSha256": "8dd76506ba51304606f7be4ca494f7ca4d8d1ed128a3e2284117314e2993e6e4",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.1,
+          0.18,
+          10.2
+        ],
+        "bounds": {
+          "min": [
+            -0.8628956079483032,
+            -2.181666612625122,
+            -0.22199521958827972
+          ],
+          "max": [
+            0.9043676257133484,
+            1.6018520593643188,
+            0.3745584487915039
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 8,
+        "frame": 72,
+        "localSeconds": 1.2,
+        "sourceSeconds": 59.2,
+        "shotId": "S02",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6033,
+        "centralBrightPixels": 5730,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 249,
+          "xMax": 719,
+          "yMin": 76,
+          "yMax": 462,
+          "width": 471,
+          "height": 387
+        },
+        "rawPixelSha256": "9ee7533da63a2ef538ea00e3118889066f3610e4e7c85cb071d930c601317533",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 111,
+      "file": "reviews/pilot-v2/frame-111.png",
+      "pngSha256": "1093ad94ba2d3d097dce1acde9f1735cc50ff0b01a883b297b173497073f58c4",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.09940801903605462,
+          0.04999999999999999,
+          9.8
+        ],
+        "bounds": {
+          "min": [
+            -0.8400242924690247,
+            -2.181666612625122,
+            -0.19070596992969513
+          ],
+          "max": [
+            0.49142134189605713,
+            1.002098798751831,
+            0.9037725329399109
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 111,
+        "localSeconds": 1.85,
+        "sourceSeconds": 59.85,
+        "shotId": "S02",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6025,
+        "centralBrightPixels": 5602,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 709,
+          "yMin": 90,
+          "yMax": 465,
+          "width": 470,
+          "height": 376
+        },
+        "rawPixelSha256": "7eac60a622e87a8211b9223e7733903faf636e8f8da2dca3ca7d4cceacb1871a",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 149,
+      "file": "reviews/pilot-v2/frame-149.png",
+      "pngSha256": "f387018262b98f9bb1e65773460edfcba0afd0344cb3ccd20dddd61fc057670e",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.09999808132660748,
+          -0.07987289064212144,
+          9.40039110571655
+        ],
+        "bounds": {
+          "min": [
+            -0.833812415599823,
+            -2.181666612625122,
+            -0.19070596992969513
+          ],
+          "max": [
+            0.49142134189605713,
+            1.0543512105941772,
+            0.9653264284133911
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 149,
+        "localSeconds": 2.4833333333333334,
+        "sourceSeconds": 60.483333333333334,
+        "shotId": "S02",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6748,
+        "centralBrightPixels": 6522,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 706,
+          "yMin": 59,
+          "yMax": 466,
+          "width": 467,
+          "height": 408
+        },
+        "rawPixelSha256": "51688de900033a922554f227a5404685549da5078829fe5b69f7becdf26ed981",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 150,
+      "file": "reviews/pilot-v2/frame-150.png",
+      "pngSha256": "d6caec331eb51c92be816f9b28ddf426528d6b9892ad0ac8a7451cf2d7e23572",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.1,
+          -0.08,
+          9.4
+        ],
+        "bounds": {
+          "min": [
+            -0.8318074941635132,
+            -2.181666612625122,
+            -0.19070596992969513
+          ],
+          "max": [
+            0.49142134189605713,
+            1.055342674255371,
+            0.9662290811538696
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 150,
+        "localSeconds": 2.5,
+        "sourceSeconds": 60.5,
+        "shotId": "S03",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 6749,
+        "centralBrightPixels": 6524,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 706,
+          "yMin": 59,
+          "yMax": 466,
+          "width": 467,
+          "height": 408
+        },
+        "rawPixelSha256": "73ca03e4c415f29385f694e600a727509f62dbdd111745b7bff19531120aa38c",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 195,
+      "file": "reviews/pilot-v2/frame-195.png",
+      "pngSha256": "06d92870dfe91628401a035a8dd230a49cf8b4c74a3da00bd76d041f23fb0ff6",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.39611923590302467,
+          -0.09,
+          8.9
+        ],
+        "bounds": {
+          "min": [
+            -2.101222276687622,
+            -2.181666612625122,
+            -0.31857678294181824
+          ],
+          "max": [
+            2.359203815460205,
+            1.5792232751846313,
+            0.3745584487915039
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 195,
+        "localSeconds": 3.25,
+        "sourceSeconds": 61.25,
+        "shotId": "S03",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 10913,
+        "centralBrightPixels": 9691,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 489,
+          "width": 480,
+          "height": 435
+        },
+        "rawPixelSha256": "3504081d2843d24fcfa123c5625cb48752da1a6a39972dc685c92efd463d4706",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 239,
+      "file": "reviews/pilot-v2/frame-239.png",
+      "pngSha256": "6f51c897959c13d726bbd798d580ac943b074ee9543fc2e22633f44961326abf",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.6997714149729363,
+          -0.0999926474622771,
+          8.400367626886146
+        ],
+        "bounds": {
+          "min": [
+            -2.323580026626587,
+            -2.181666612625122,
+            -0.4318816661834717
+          ],
+          "max": [
+            2.1568145751953125,
+            1.5037585496902466,
+            0.3745584487915039
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 239,
+        "localSeconds": 3.9833333333333334,
+        "sourceSeconds": 61.983333333333334,
+        "shotId": "S03",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 13978,
+        "centralBrightPixels": 11669,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 716,
+          "yMin": 54,
+          "yMax": 501,
+          "width": 477,
+          "height": 448
+        },
+        "rawPixelSha256": "89f5f7dfcdf2eecd147c574837bbdf37d28f058feea602b2857c6a94853adcae",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 240,
+      "file": "reviews/pilot-v2/frame-240.png",
+      "pngSha256": "c9ab0ac11ff84caf68874ecbc33eb667b090f00f15a325286c1f94d3387063b5",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.7,
+          -0.1,
+          8.4
+        ],
+        "bounds": {
+          "min": [
+            -2.327314853668213,
+            -2.181666612625122,
+            -0.4316909909248352
+          ],
+          "max": [
+            2.1492223739624023,
+            1.5043060779571533,
+            0.3745584487915039
+          ]
+        },
+        "bodyMode": "intact",
+        "dispersion": 0,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 17,
+        "frame": 240,
+        "localSeconds": 4,
+        "sourceSeconds": 62,
+        "shotId": "S04",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 15273,
+        "centralBrightPixels": 12895,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 501,
+          "width": 480,
+          "height": 448
+        },
+        "rawPixelSha256": "028f3f5afea58fe30207f6eb5a87c43bc63aa9378e30c5b756079cb41fe3059e",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 285,
+      "file": "reviews/pilot-v2/frame-285.png",
+      "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.19308238688739948,
+          0.061010742187499994,
+          6.192138671875
+        ],
+        "bounds": {
+          "min": [
+            -3.1485729217529297,
+            -3.987250566482544,
+            -3.328598737716675
+          ],
+          "max": [
+            3.2608437538146973,
+            3.083012342453003,
+            0.10613424330949783
+          ]
+        },
+        "bodyMode": "fractured",
+        "dispersion": 0.648,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 5,
+        "frame": 285,
+        "localSeconds": 4.75,
+        "sourceSeconds": 62.75,
+        "shotId": "S04",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 9274,
+        "centralBrightPixels": 7289,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 329,
+      "file": "reviews/pilot-v2/frame-329.png",
+      "pngSha256": "497289461ab54d706ba134edd3532bbde811c744f24edfc0b4a12b7c7b86eeec",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.040203033206416064,
+          0.14988444010416668,
+          5.500898799189815
+        ],
+        "bounds": {
+          "min": [
+            -4.272940635681152,
+            -4.544858932495117,
+            -5.278637409210205
+          ],
+          "max": [
+            4.738487243652344,
+            3.8699045181274414,
+            -0.06124551221728325
+          ]
+        },
+        "bodyMode": "fractured",
+        "dispersion": 1,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 9,
+        "frame": 329,
+        "localSeconds": 5.483333333333333,
+        "sourceSeconds": 63.483333333333334,
+        "shotId": "S04",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 8869,
+        "centralBrightPixels": 4424,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "72b3d38e148749a3ec6106e70839b753839e723075ad0616f2bd02a63b688a16",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 330,
+      "file": "reviews/pilot-v2/frame-330.png",
+      "pngSha256": "72b49609d97b405d5f7319531b71a29eef8b8e7ea1cfd0819ddc6bc4a07fa182",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.04,
+          0.15,
+          5.5
+        ],
+        "bounds": {
+          "min": [
+            -4.264370918273926,
+            -4.527334690093994,
+            -5.282304286956787
+          ],
+          "max": [
+            4.742090702056885,
+            3.8526530265808105,
+            -0.06124551221728325
+          ]
+        },
+        "bodyMode": "core",
+        "dispersion": 1,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 9,
+        "frame": 330,
+        "localSeconds": 5.5,
+        "sourceSeconds": 63.5,
+        "shotId": "S05",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 8871,
+        "centralBrightPixels": 4407,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "00c2bfb2d63fde7e670cf07c75a7c1f4d4b4e40ea436a0f9cc0e73d73615ef83",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 375,
+      "file": "reviews/pilot-v2/frame-375.png",
+      "pngSha256": "a26db2bb9c7f6469901ee90b8cd604b91b9736be39a8bff3a5694b8347660ff8",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.03875026240944862,
+          0.1,
+          6
+        ],
+        "bounds": {
+          "min": [
+            -4.137526035308838,
+            -3.4264025688171387,
+            -5.4473042488098145
+          ],
+          "max": [
+            4.705846786499023,
+            3.23982572555542,
+            -0.06124551221728325
+          ]
+        },
+        "bodyMode": "core",
+        "dispersion": 1,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 7,
+        "frame": 375,
+        "localSeconds": 6.25,
+        "sourceSeconds": 64.25,
+        "shotId": "S05",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5927,
+        "centralBrightPixels": 3445,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 507,
+          "width": 480,
+          "height": 454
+        },
+        "rawPixelSha256": "dce54b1a188aed1e9bd96423d6d1d12b3cdc5fed94bab3a3493d1bfaffb18e0b",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 419,
+      "file": "reviews/pilot-v2/frame-419.png",
+      "pngSha256": "0e9261b3bf670c5b6460d732a650896ed5324ae730ab9c56835f4f7d1e1cab8e",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.03999935844722845,
+          0.05003676268861454,
+          6.4996323731138546
+        ],
+        "bounds": {
+          "min": [
+            -3.750912666320801,
+            -2.1615207195281982,
+            -5.60863733291626
+          ],
+          "max": [
+            4.28568172454834,
+            2.7141332626342773,
+            -0.06124551221728325
+          ]
+        },
+        "bodyMode": "core",
+        "dispersion": 1,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 7,
+        "frame": 419,
+        "localSeconds": 6.983333333333333,
+        "sourceSeconds": 64.98333333333333,
+        "shotId": "S05",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5448,
+        "centralBrightPixels": 4134,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 500,
+          "width": 480,
+          "height": 446
+        },
+        "rawPixelSha256": "a15dc0d4acc4eddb9fe20dcf503692d9f1614a1737a13ad0ee379780994f7c7b",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 420,
+      "file": "reviews/pilot-v2/frame-420.png",
+      "pngSha256": "c598bdbcdc9c19dafd00d548beae66f9703393cd57a4c84a5bd9cb69e7ed0797",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.04,
+          0.05,
+          6.5
+        ],
+        "bounds": {
+          "min": [
+            -3.7474541664123535,
+            -2.140651226043701,
+            -5.612304210662842
+          ],
+          "max": [
+            4.2650532722473145,
+            2.703939914703369,
+            -0.06124551221728325
+          ]
+        },
+        "bodyMode": "reforming",
+        "dispersion": 1,
+        "reassembly": 0,
+        "rootPosition": [
+          0,
+          0,
+          0
+        ],
+        "drawCalls": 7,
+        "frame": 420,
+        "localSeconds": 7,
+        "sourceSeconds": 65,
+        "shotId": "S06",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5527,
+        "centralBrightPixels": 4150,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 500,
+          "width": 480,
+          "height": 446
+        },
+        "rawPixelSha256": "35d39bbb0443978398e530f0f2dc399cbe526735e04c3fe1e7b1eeffc29ccc94",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 495,
+      "file": "reviews/pilot-v2/frame-495.png",
+      "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.21650140187723882,
+          -0.30000000000000004,
+          5
+        ],
+        "bounds": {
+          "min": [
+            -1.481677532196045,
+            -1.3740731477737427,
+            -4.5912933349609375
+          ],
+          "max": [
+            1.1735936403274536,
+            1.1102261543273926,
+            -0.7965387105941772
+          ]
+        },
+        "bodyMode": "reforming",
+        "dispersion": 0.3723630905151367,
+        "reassembly": 0.6276369094848633,
+        "rootPosition": [
+          0.175,
+          0,
+          -1.5
+        ],
+        "drawCalls": 21,
+        "frame": 495,
+        "localSeconds": 8.25,
+        "sourceSeconds": 66.25,
+        "shotId": "S06",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 11740,
+        "centralBrightPixels": 9936,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 56,
+          "yMax": 512,
+          "width": 480,
+          "height": 457
+        },
+        "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 569,
+      "file": "reviews/pilot-v2/frame-569.png",
+      "pngSha256": "f8429dd3c3428e51b8ab7abfaf8e5d3132d4e472ff6ae1a7fa8755725d5e4a39",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.3999503355984182,
+          -0.6499070814814815,
+          3.5003982222222225
+        ],
+        "bounds": {
+          "min": [
+            -1.836532473564148,
+            -2.218510150909424,
+            -3.5054497718811035
+          ],
+          "max": [
+            2.505655527114868,
+            1.6582235097885132,
+            -2.288752317428589
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.3499535407407407,
+          0,
+          -2.9996017777777775
+        ],
+        "drawCalls": 17,
+        "frame": 569,
+        "localSeconds": 9.483333333333333,
+        "sourceSeconds": 67.48333333333333,
+        "shotId": "S06",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 14413,
+        "centralBrightPixels": 11897,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "9cacb0e690071c0b5f373c71db9cfb71e707a339fc7c06f041105e5aa77bf9ce",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 570,
+      "file": "reviews/pilot-v2/frame-570.png",
+      "pngSha256": "a8433c3356efd4aa4e17d7a7b401c84a3dc18043c4078eb8fcbdbd51c5402d21",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.4,
+          -0.65,
+          3.5
+        ],
+        "bounds": {
+          "min": [
+            -1.8481863737106323,
+            -2.2165956497192383,
+            -3.422818183898926
+          ],
+          "max": [
+            2.4981529712677,
+            1.6620676517486572,
+            -2.3700129985809326
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.35,
+          0,
+          -3
+        ],
+        "drawCalls": 17,
+        "frame": 570,
+        "localSeconds": 9.5,
+        "sourceSeconds": 67.5,
+        "shotId": "S07",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 14269,
+        "centralBrightPixels": 11794,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 54,
+          "yMax": 512,
+          "width": 480,
+          "height": 459
+        },
+        "rawPixelSha256": "eccc23a690ee04d068c04a5fc00044b1f0935f4423714e5c93ca09bae175c946",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 639,
+      "file": "reviews/pilot-v2/frame-639.png",
+      "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.472467636987567,
+          -0.2,
+          2.6
+        ],
+        "bounds": {
+          "min": [
+            -1.1111358404159546,
+            -2.1833741664886475,
+            -4.123955249786377
+          ],
+          "max": [
+            1.5397800207138062,
+            1.5288136005401611,
+            -2.287653923034668
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.425,
+          0,
+          -3.3
+        ],
+        "drawCalls": 9,
+        "frame": 639,
+        "localSeconds": 10.65,
+        "sourceSeconds": 68.65,
+        "shotId": "S07",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 15172,
+        "centralBrightPixels": 14066,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 718,
+          "yMin": 55,
+          "yMax": 512,
+          "width": 475,
+          "height": 458
+        },
+        "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 707,
+      "file": "reviews/pilot-v2/frame-707.png",
+      "pngSha256": "5bb9806f136c8b4ed7252a8b722d3e3f39a530227d28affae75a2dd0800111a2",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.5499760753890217,
+          0.249858907975124,
+          1.700282184049752
+        ],
+        "bounds": {
+          "min": [
+            -0.38122040033340454,
+            -2.218144416809082,
+            -4.130643844604492
+          ],
+          "max": [
+            1.546104907989502,
+            1.5946850776672363,
+            -2.864943027496338
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.49997648466252065,
+          0,
+          -3.5999059386500827
+        ],
+        "drawCalls": 9,
+        "frame": 707,
+        "localSeconds": 11.783333333333333,
+        "sourceSeconds": 69.78333333333333,
+        "shotId": "S07",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 17395,
+        "centralBrightPixels": 15797,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 716,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 473,
+          "height": 455
+        },
+        "rawPixelSha256": "57ed6cb93f5b27d994255fe01cd9fdd3aeaf19873909a38800c2febe33bd7f19",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 708,
+      "file": "reviews/pilot-v2/frame-708.png",
+      "pngSha256": "7543342fa677ca76274f262a824f604bcbd0c662de6a1f31a529cbd26da5e12f",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.55,
+          0.25,
+          1.7
+        ],
+        "bounds": {
+          "min": [
+            -0.3854076564311981,
+            -2.217717409133911,
+            -4.145497798919678
+          ],
+          "max": [
+            1.5563979148864746,
+            1.5986212491989136,
+            -2.850766181945801
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.5,
+          0,
+          -3.6
+        ],
+        "drawCalls": 9,
+        "frame": 708,
+        "localSeconds": 11.8,
+        "sourceSeconds": 69.8,
+        "shotId": "S08",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 17375,
+        "centralBrightPixels": 15754,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 244,
+          "xMax": 701,
+          "yMin": 58,
+          "yMax": 512,
+          "width": 458,
+          "height": 455
+        },
+        "rawPixelSha256": "f8b703d708298e1c51fc75ac70b839ad39db2c5d95432571b9e85e2f04ceed0f",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 804,
+      "file": "reviews/pilot-v2/frame-804.png",
+      "pngSha256": "e9fcc563df0bb293c33d1ea80ae0aebb42c1e7a1cf6b72bdc8421b2bf6153bf6",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.5744737946987152,
+          0.55,
+          3.75
+        ],
+        "bounds": {
+          "min": [
+            -0.42470887303352356,
+            -2.181666612625122,
+            -3.8004720211029053
+          ],
+          "max": [
+            1.3310699462890625,
+            1.5544772148132324,
+            -3.2194368839263916
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.5,
+          0,
+          -3.6
+        ],
+        "drawCalls": 9,
+        "frame": 804,
+        "localSeconds": 13.4,
+        "sourceSeconds": 71.4,
+        "shotId": "S08",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 9679,
+        "centralBrightPixels": 9185,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 262,
+          "xMax": 712,
+          "yMin": 71,
+          "yMax": 512,
+          "width": 451,
+          "height": 442
+        },
+        "rawPixelSha256": "7937de11b4eeda7678639731b9c551b8cd2b831228b9bc63b055428ce423310d",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    },
+    {
+      "frame": 899,
+      "file": "reviews/pilot-v2/frame-899.png",
+      "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683",
+      "pngDimensions": {
+        "width": 960,
+        "height": 540
+      },
+      "snapshot": {
+        "characterCount": 1426,
+        "characterIdHash": "149d2e90",
+        "finite": true,
+        "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "cameraPosition": [
+          0.5999958746724405,
+          0.8499513414171007,
+          5.799667499683522
+        ],
+        "bounds": {
+          "min": [
+            -0.5175371766090393,
+            -2.181666612625122,
+            -3.8246724605560303
+          ],
+          "max": [
+            1.6176552772521973,
+            1.695928931236267,
+            -3.191887140274048
+          ]
+        },
+        "bodyMode": "active",
+        "dispersion": 0,
+        "reassembly": 1,
+        "rootPosition": [
+          0.5,
+          0,
+          -3.6
+        ],
+        "drawCalls": 9,
+        "frame": 899,
+        "localSeconds": 14.983333333333333,
+        "sourceSeconds": 72.98333333333333,
+        "shotId": "S08",
+        "implemented": true
+      },
+      "pixels": {
+        "width": 960,
+        "height": 540,
+        "readPixelsError": 0,
+        "brightChannelThreshold": 64,
+        "brightPixels": 5831,
+        "centralBrightPixels": 5704,
+        "centralRegion": {
+          "xMin": 240,
+          "xMaxExclusive": 720,
+          "yMin": 54,
+          "yMaxExclusive": 513,
+          "coordinateSystem": "canvas top-left"
+        },
+        "centralBrightBoundingBox": {
+          "xMin": 240,
+          "xMax": 719,
+          "yMin": 55,
+          "yMax": 492,
+          "width": 480,
+          "height": 438
+        },
+        "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+        "method": "WebGL readPixels immediately after awaited renderFrame; central bbox is not semantic person detection"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "shotId": "S01",
+      "frames": [
+        0,
+        36,
+        71
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S02",
+      "frames": [
+        72,
+        111,
+        149
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S03",
+      "frames": [
+        150,
+        195,
+        239
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S04",
+      "frames": [
+        240,
+        285,
+        329
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S05",
+      "frames": [
+        330,
+        375,
+        419
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S06",
+      "frames": [
+        420,
+        495,
+        569
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S07",
+      "frames": [
+        570,
+        639,
+        707
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    },
+    {
+      "shotId": "S08",
+      "frames": [
+        708,
+        804,
+        899
+      ],
+      "distinctPngHashes": 3,
+      "allImplemented": true
+    }
+  ],
+  "boundaryFrames": [
+    0,
+    71,
+    72,
+    149,
+    150,
+    239,
+    240,
+    329,
+    330,
+    419,
+    420,
+    569,
+    570,
+    707,
+    708,
+    899
+  ],
+  "repeatOrder": [
+    285,
+    285,
+    0,
+    639,
+    495,
+    899,
+    0,
+    899,
+    639,
+    495
+  ],
+  "repeatedFrames": [
+    {
+      "frame": 285,
+      "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32",
+      "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 285,
+      "pngSha256": "cb384472dda7f3b5d8e5e7b71e9b3ea83f98f26cbe05a453509ba9d029023a32",
+      "rawPixelSha256": "be903e4d36789dd7a81e20b53eeac23463448d0a1fa6e9037a059c432e955480",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 0,
+      "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d",
+      "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 639,
+      "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34",
+      "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 495,
+      "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a",
+      "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 899,
+      "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683",
+      "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 0,
+      "pngSha256": "fbcbb2190cc9dfba163445b1244b3956823a3abef5c5fd74885631841f1c0d8d",
+      "rawPixelSha256": "5f8d50e489fd11fd8db6df6498ab4515b03499685d0bdd0146d4dfb4295a0f95",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 899,
+      "pngSha256": "81cda67002e6f3bfb1f6d47e2751c4eb04fc86b0f94edbc190e54ef6731d3683",
+      "rawPixelSha256": "d3562b6bb19ee55bbfcd4e26e4d1c02290a846ec09c3e526079e6294ae38bb89",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 639,
+      "pngSha256": "d7fa8e12242b842fa36e5828b83cf9ad1e0038f091c2bbd06c91e7706de4ac34",
+      "rawPixelSha256": "51f6b5f29f26e5eb40471495fdf41cae3507253428c4d983551dc6bbd22a01bf",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    },
+    {
+      "frame": 495,
+      "pngSha256": "44e4f77ee374437c81f2d036f4d881025147fbdc00a1ebbf8e246e761ab1e37a",
+      "rawPixelSha256": "f7f6a0f41ff27bce041b6ec5efcdb750c2de79f66ba02b32a80977c507e39de7",
+      "pngMatches": true,
+      "pixelsMatch": true,
+      "snapshotMatches": true
+    }
+  ],
+  "loopSamples": [
+    {
+      "observedAtMs": 2954.9000000003725,
+      "frame": 0,
+      "loopButton": "停止循环",
+      "audioPaused": true,
+      "audioTime": 0,
+      "audioError": null
+    },
+    {
+      "observedAtMs": 4152.800000000279,
+      "frame": 72,
+      "loopButton": "停止循环",
+      "audioPaused": true,
+      "audioTime": 0,
+      "audioError": null
+    },
+    {
+      "observedAtMs": 4377.4000000003725,
+      "frame": 85,
+      "loopButton": "停止循环",
+      "audioPaused": true,
+      "audioTime": 0,
+      "audioError": null
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "requestFailures": [],
+  "fatalErrors": [],
+  "limitations": [
+    "This is an engineering review of a rough 15-second pilot; director aesthetic acceptance remains pending.",
+    "Beat phase and lyric alignment remain uncalibrated; screenshots do not prove music synchronization.",
+    "PNG changes demonstrate changed pixels only, not perceptible motion, narrative clarity, or dramatic tension.",
+    "Pixel reproducibility is tested only in the recorded browser, dependency, font, and GPU environment.",
+    "Central bright-pixel bounding boxes are an engineering presence proxy, may include panels, and do not identify or artistically validate a person.",
+    "Browser font APIs do not fully expose the resolved system font fallback.",
+    "Twenty-four review PNGs are not a 900-frame video export; muted UI playback is not human listening review."
+  ],
+  "reviewFrames": [
+    0,
+    36,
+    71,
+    72,
+    111,
+    149,
+    150,
+    195,
+    239,
+    240,
+    285,
+    329,
+    330,
+    375,
+    419,
+    420,
+    495,
+    569,
+    570,
+    639,
+    707,
+    708,
+    804,
+    899
+  ],
+  "repeatOrderSeed": 1768612593,
+  "loopTiming": {
+    "elapsedMs": 1422.5,
+    "frameAdvance": 85,
+    "sampledTimelineFramesPerSecond": 59.753954305799645,
+    "note": "Observed timeline advancement; not a measurement of GPU draw throughput."
+  }
+}

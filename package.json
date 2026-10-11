@@ -10,8 +10,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
-    "review:frames": "node scripts/render_keyframes.mjs",
-    "review:ui": "node scripts/check_preview.mjs"
+    "review:frames": "node scripts/review_pilot.mjs",
+    "review:ui": "node scripts/review_pilot.mjs",
+    "export:pilot": "node scripts/export_pilot.mjs"
   },
   "dependencies": { "three": "0.186.1" },
   "devDependencies": {

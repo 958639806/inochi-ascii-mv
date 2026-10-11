@@ -52,6 +52,6 @@ export function getFrameInfo(frame: number): FrameInfo {
     shotProgress:
       (frame - shot.first_frame) /
       (shot.last_frame_exclusive - shot.first_frame),
-    implemented: shot.id === 'S01',
+    implemented: true,
   };
 }

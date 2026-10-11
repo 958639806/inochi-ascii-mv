@@ -84,10 +84,18 @@ describe('pilot timeline', () => {
     }
   });
 
-  it('does not label the seven later shots as implemented', () => {
-    for (let frame = 72; frame < pilotTimeline.video.total_frames; frame += 1) {
-      expect(getFrameInfo(frame).implemented).toBe(false);
+  it('marks the eight animated blockout shots as implemented', () => {
+    for (let frame = 0; frame < pilotTimeline.video.total_frames; frame += 1) {
+      expect(getFrameInfo(frame).implemented).toBe(true);
     }
+  });
+
+  it('keeps draft explosion and reassembly events inside their shots', () => {
+    expect(getFrameInfo(pilotTimeline.events.explosion_frame).shot.id).toBe('S04');
+    expect(getFrameInfo(pilotTimeline.events.reassembly_start_frame).shot.id).toBe('S06');
+    expect(getFrameInfo(pilotTimeline.events.reassembly_end_frame).shot.id).toBe('S06');
+    expect(pilotTimeline.events.reassembly_end_frame).toBeGreaterThan(pilotTimeline.events.reassembly_start_frame);
+    expect(pilotTimeline.timing.beat_phase_verified).toBe(false);
   });
 
   it('returns the same metadata when queried in an arbitrary order', () => {

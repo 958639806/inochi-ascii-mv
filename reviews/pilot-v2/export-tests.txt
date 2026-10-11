@@ -1,0 +1,9 @@
+Captured 120/900 offline frames.
+Captured 240/900 offline frames.
+Captured 360/900 offline frames.
+Captured 480/900 offline frames.
+Captured 600/900 offline frames.
+Captured 720/900 offline frames.
+Captured 840/900 offline frames.
+Captured 900/900 offline frames.
+PASS: 900/900 captured; report reviews/pilot-v2/export-report.json

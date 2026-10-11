@@ -32,16 +32,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
     <section class="transport" aria-label="预览控制">
       <div class="transport-row">
-        <button id="loop-s01" class="primary" disabled>循环看 S01</button>
+        <button id="loop-pilot" class="primary" disabled>循环看全段</button>
         <button id="play" disabled>试听预览</button>
         <label class="frame-label">FRAME <input id="frame-input" type="number" min="0" max="899" step="1" value="0" aria-label="跳转到帧" /></label>
-        <div class="keyframes"><span>首轮审阅</span><button data-frame="0">000</button><button data-frame="36">036</button><button data-frame="71">071</button></div>
+        <div class="keyframes"><span>张力节点</span><button data-frame="240">爆前</button><button data-frame="285">爆裂</button><button data-frame="495">重组</button><button data-frame="639">对峙</button></div>
         <span id="frame-count">000 / 899</span>
       </div>
       <input id="scrub" type="range" min="0" max="899" step="1" value="0" aria-label="帧时间轴" />
     </section>
-    <section class="shots" aria-label="镜头导航">${pilotTimeline.shots.map((shot) => `<button class="shot" data-frame="${shot.first_frame}" data-shot="${shot.id}"><span>${shot.id}<small>${shot.id === 'S01' ? '可预览' : '待实现'}</small></span><strong>${shot.name}</strong><em>${shot.first_frame}–${shot.last_frame_exclusive - 1} 帧</em></button>`).join('')}</section>
-    <footer class="notes"><p>点“循环看 S01”可无声反复查看肩胸、头部与手臂动作。试听 1.2 秒后进入待实现镜头，画面保持 S01 尾帧。</p><p>歌词与鼓点尚未精校 · 三张静帧用于构图与可读性审阅</p></footer>
+    <section class="shots" aria-label="镜头导航">${pilotTimeline.shots.map((shot) => `<button class="shot" data-frame="${shot.first_frame}" data-shot="${shot.id}"><span>${shot.id}<small>动态初版</small></span><strong>${shot.name}</strong><em>${shot.first_frame}–${shot.last_frame_exclusive - 1} 帧</em></button>`).join('')}</section>
+    <footer class="notes"><p>八段动态初版：围困 → 挣扎 → 爆裂 → 空旷后台 → 同字符重组 → 大幅前冲 → 余震。点“试听预览”配音乐，或无声循环全段。</p><p>镜头与事件仍为导演草案 · 歌词和鼓点待精校 · 动作强度待审阅</p></footer>
     <p id="error" role="alert" hidden></p>
     <audio id="pilot-audio" preload="none" src="${audioUrl}"></audio>
   </main>`;
@@ -55,14 +55,12 @@ const audio = element<HTMLAudioElement>('pilot-audio');
 const slider = element<HTMLInputElement>('scrub');
 const input = element<HTMLInputElement>('frame-input');
 const play = element<HTMLButtonElement>('play');
-const loop = element<HTMLButtonElement>('loop-s01');
+const loop = element<HTMLButtonElement>('loop-pilot');
 const defaultSeed = pilotTimeline.timing.random_seed;
 const fps = pilotTimeline.video.fps_num / pilotTimeline.video.fps_den;
 const lastOutputFrame = pilotTimeline.video.total_frames - 1;
-const firstShot = pilotTimeline.shots.find((shot) => shot.id === 'S01');
-if (!firstShot) throw new Error('The pilot timeline must define S01.');
-const loopFirstFrame = firstShot.first_frame;
-const loopFrameCount = firstShot.last_frame_exclusive - loopFirstFrame;
+const loopFirstFrame = 0;
+const loopFrameCount = pilotTimeline.video.total_frames;
 let currentFrame = 0;
 let currentSeed = defaultSeed;
 let scene: PilotScene;
@@ -80,7 +78,7 @@ function stopPreview(): void {
   audio.pause();
   cancelAnimationFrame(previewTick);
   looping = false;
-  loop.textContent = '循环看 S01';
+  loop.textContent = '循环看全段';
   play.textContent = '试听预览';
 }
 
@@ -97,7 +95,7 @@ function drawFrame(frame: number, seed: number): RenderEvidence {
   element('shot-heading').textContent = `${info.shot.id} / ${info.shot.name}`;
   element('time-heading').textContent = `${info.localSeconds.toFixed(3)}s · 原曲 ${info.sourceSeconds.toFixed(3)}s`;
   element('seed-heading').textContent = `SEED ${seed}`;
-  element('implementation').textContent = info.implemented ? (looping ? 'S01 无声循环 · 身体动作审阅' : 'S01 动作修订 · 视觉待导演审阅') : `${info.shot.id} 待实现 · 当前画面为 S01 尾帧`;
+  element('implementation').textContent = `${info.shot.id} ${looping ? '无声循环' : '动态初版'} · 视觉与节奏待导演审阅`;
   document.querySelectorAll<HTMLElement>('[data-shot]').forEach((button) => {
     button.classList.toggle('active', button.dataset.shot === info.shot.id);
     button.setAttribute('aria-pressed', String(button.dataset.shot === info.shot.id));

@@ -32,6 +32,15 @@
     "lyric_alignment_verified": false,
     "random_seed": 958639806
   },
+  "events": {
+    "explosion_frame": 258,
+    "reassembly_start_frame": 420,
+    "reassembly_end_frame": 548,
+    "calibration_status": "DIRECTOR_DRAFT_NOT_BEAT_ALIGNED"
+  },
+  "motion": {
+    "amplitude_scale": 1.0
+  },
   "shots": [
     {
       "id": "S01",

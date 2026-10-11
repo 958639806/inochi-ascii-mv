@@ -1,0 +1,2 @@
+PASS: 122/122 full-pilot engineering checks; 24 actual canvas PNGs.
+Report: reviews/pilot-v2/browser-report.json; director review, beat and lyric calibration remain pending.

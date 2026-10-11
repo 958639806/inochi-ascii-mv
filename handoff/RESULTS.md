@@ -64,3 +64,18 @@
 - 产物：`reviews/t01-motion/` 中 baseline/revised-motion.json、3 实拍关键帧、workbench-loop.png、3 类浏览器报告与真实命令输出；上一轮 `reviews/t01/` 原文件保留。日志仅规范行尾空白。源码修改后的 Python 交接测试本轮未重跑，其配置与音频未修改。
 - 待审：是否现在能清楚感到肩胸/头/手动作、是否仍克制；短段循环返回首帧的回跳仅用于预览。R001 状态 ADDRESSED，等待用户/导演确认，不标 VERIFIED。
 - 下一步：复审 R001，再沿既有 NEXT 进入 T02；没有扩大到全曲、导出 MP4 或自动合并。
+
+## Round 3 / 持续制作 / Codex — T02 与八段动态初版
+- 起始 commit：`087ac361d39b78c67b36d3f5083d540a7eba0e9a`。工作仍在 `codex/pilot-v1` / Draft PR #1；结果提交见本轮 PR head。实际执行时间取 `reviews/pilot-v2/export-report.json` 的 startedAt / completedAt。
+- 用户授权：R002“没有张力，继续生成下面的，要有张力，幅度要大”；旧等待审阅门槛已被此继续指令解除。不扩大到全曲，也没有把它当合并/公开授权。
+- 实际实现：S01肩胸/头/手约16/15/29px固定相机估算量级；S02收缩与向头侧护头，窗口真正靠近；S03双臂大幅推拒与文字墙；S04同1426 ID定向螺旋爆散（约9world跨度）与急推；S05原胸口64 ID核心/后台反讽；S06按部位错时回流、约6%低亮缺口/跨步z推进；S07半身压近、旧状态失效只保留ACTIVE主状态；S08持续余震/后撤露系统空间。
+- JSON唯一配置新增未校准事件：爆裂258，回流420–548；镜头边界0–899与音轨本地零偏移保持，beat/lyric verified仍false。帧姿态、字符、相机和环境完全由frame/seed重建；无前帧缓冲或实时音频分析依赖。
+- 实际检查：`pnpm build` PASS（约552 kB chunk默认提示）；`pnpm test` 3文件/65 tests PASS；`python -m unittest discover -s tests -v` 13 tests OK；`node scripts/review_pilot.mjs` 122/122 PASS、24 actual PNG。首轮服务端口已结束导致一次ERR_CONNECTION_REFUSED，重启本地preview后重跑通过，未将那次失败写成通过。
+- 实拍后局部修正：S02举手姿态改为双臂向头侧收拢并更早压低；S07旧UNSTABLE等表面面板提前失效，不抢ACTIVE。修正后再次构建、65单测与122浏览器检查通过。源代码冻结后导出最终视频。
+- 视频命令：`$env:PILOT_FFMPEG='<本地FFmpeg可执行文件>'; $env:PILOT_BROWSER_CHANNEL='msedge'; $env:PILOT_URL='http://127.0.0.1:4173'; node scripts/export_pilot.mjs --overwrite`。仅替换本项目已生成的预览文件，未覆盖其他项目或Git历史。
+- 实际导出：900帧逐一await renderFrame、PNG流到FFmpeg，不是实时录屏；`reviews/pilot-v2/preview-960x540.mp4`。960×540/60fps/15.00s/H264 High/yuv420p，AAC 48k双声道约321kbps；900完整解码/PTS0–899/timebase1/60/900不同帧/无相邻重复，AAC完整解码通过。第一次预览已成功；最后护头修正后重新生成并再次完整验证，报告对应最终源码hash。
+- FFmpeg为项目外局部工具：PyPI imageio-ffmpeg0.6.0 Windows wheel的下载SHA256已核验，FFmpeg7.1/libx264实际可用；未全局安装/修改系统或上传FFmpeg/依赖目录。
+- 产物位置：`reviews/pilot-v2/` 内24关键帧、browser-report.json、export-report.json、preview MP4、FFmpeg全解码日志/framemd5、构建/单测/交接真实输出。未保存或提交900张渲染帧序列。上轮历史产物保持原路径。
+- 三个重点审阅：S04 240/285/329的蓄压到爆裂；S06 420/495/569的同ID回流/冲出；S07 639与S08 804/899的近景张力/余震后撤。全文索引见reviews/pilot-v2/README.md。
+- 未完成：导演张力验收、腿部步态/文字密度等精修、听审/歌词鼓点精校、1080p60正式母版。测试和全解码不等于美学通过；没有外部模型意见或公开发布。
+- 下一步：直接审阅实际带音乐预览，按R002给镜头/帧范围内最小反馈，再做校准与正式导出；不重新编写整份方案。
