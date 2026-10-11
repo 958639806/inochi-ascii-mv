@@ -1,0 +1,2 @@
+PASS: 12/12 UI/audio smoke checks.
+Report: reviews/t01/ui-report.json; muted engineering playback only, no listening review.

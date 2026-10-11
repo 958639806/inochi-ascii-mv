@@ -28,3 +28,55 @@
 - 真实测试：发布前 `python scripts/check_package.py` PASS（24 files / 900 frames / 15 s audio）；`python -m unittest discover -s tests -v` 13 tests，OK。
 - 产物：任务书、配置、已批准的试片音频和原始交接文件已在私有远端初始提交中。
 - 动画、视频、导演审阅：尚未实施或通过；下一步进入 T01。
+
+## Round 1 / 2026-10-10 / Codex — T01 工程完成，视觉待审
+- 起始 commit：`30e752e43c3f864c141e08f33aa0afe9e181b222`（已核验远端 main）。
+- 工作分支与结果 commit：`codex/pilot-v1`；实现与实拍证据提交 `6763c8fce6a9aead392377402234def69726f0c9`。后续交接记录提交见 PR head，未强推、未自行合并。
+- 本轮任务 ID：T01。
+- 实际修改：Vite + TypeScript + Three.js 与锁文件；唯一 JSON 时间轴查询；固定 1426 人体字符 ID（`149d2e90`）、按帧求值的呼吸/胸口明灭、三层窗口/字符尘/慢推；可等待字体/图集/首帧的 `window.pilotReady` 和 `window.renderFrame(frame, seed)`；跳帧、镜头导航及本地裁切音频试听。
+- S01 frame 0/36/71 已实际渲染；0–899 均能查询镜头；S02–S08 标记未实现并保持 S01 尾帧，不声称完成后续画面。
+- 实际环境：Node 24.19.0 / pnpm 11.25.0；Vite 8.3.4 / TypeScript 7.0.2 / Three.js 0.186.1 / Vitest 5.0.3 / Playwright 1.64.0。系统 Edge 154.0.4258.62，ANGLE / AMD Radeon 780M / D3D11；系统字体未分发，图集声明栈和回退限制见浏览器报告。
+- 测试命令与真实结果：
+  - `pnpm install`：成功安装 49 packages，生成 `pnpm-lock.yaml`；网络重试后完成。
+  - `pnpm test`：2 files、38 tests PASS（900 帧覆盖、16 边界、非法帧、音频零偏移、固定 ID、乱序/种子与有限值）。
+  - `python -m unittest discover -s tests -v`：13 tests，OK；发布后不再对演进的 handoff 运行初始快照校验。
+  - `pnpm build`：PASS。初次 TS18048 已以 guard 后保存文案数组修复；最终有 541 kB 单入口 chunk 的默认体积提示，不阻止构建。
+  - `PILOT_BROWSER_CHANNEL=msedge node scripts/render_keyframes.mjs`（5173 开发预览）：62/62 PASS。
+  - `PILOT_URL=http://127.0.0.1:4173 PILOT_BROWSER_CHANNEL=msedge node scripts/render_keyframes.mjs`（构建预览）：62/62 PASS；3 张 960×540 PNG；71/0/36/0/71/36 乱序与种子切换后像素/PNG hash 全部复现；开发与构建三帧 hash 一致。
+  - `PILOT_URL=http://127.0.0.1:4173 PILOT_BROWSER_CHANNEL=msedge node scripts/check_preview.mjs`：12/12 PASS；按钮/输入/待实现提示、15 秒 FLAC 实际解码与本地零偏移播放、暂停和离线精确帧。浏览器静音，不是人耳听审。
+  - 上述 env 记法用于说明，PowerShell 用 `$env:...` 赋值。实际输出在 `reviews/t01/` 的 `.txt`；日志只规范行尾/尾部空白，不改结果。
+- 已解决的检查失败：metadata 预加载让浏览器取消 FLAC 范围请求，首轮截图检查为 61/62；改为点击试听才加载（`preload=none`），最终截图检查无失败请求。未将初轮失败改写成通过。
+- 产物路径：`reviews/t01/frame-000.png`、`frame-036.png`、`frame-071.png`；`browser-report.json`、`browser-report.dev.json`、`ui-report.json`；审阅索引 `reviews/t01/README.md`。
+- 三个最值得审阅的帧 / 镜头：S01 的 000（轮廓/空间）、036（字符密度/明暗）、071（尾部构图/后景窗与头部）。
+- 未完成：S02–S08 表演、T02 爆裂/重组、歌词/鼓点精校、动态视频、FFmpeg/MP4/1080p60 全序列、导演验收。未调用或虚构 Gemini / 豆包 / Grok 意见。
+- 下一步建议：导演审阅此轮 PR；必要时只改 S01 的最小比例/姿态/亮度；随后沿同一字符 ID 实施 T02 S04/S06。
+- 是否需要用户/导演决策：是。人形比例与偏直姿态、细字符是否保留；后景窗明暗/遮挡关系；动态试听下呼吸与慢推幅度。待审问题同时写入 PR，不自动启动其他模型或合并。
+- 实际 Draft PR：https://github.com/958639806/inochi-ascii-mv/pull/1 。创建前已核验远端分支为 `dffd93a4e8f8ef9c974a2ebe585a20aafe06fd89`，与本地 HEAD 一致；创建返回真实 URL，仓库 Private。当前补写 PR 链接的提交将正常追加到同一分支，不强推或合并。
+
+## Round 2 / 2026-10-10 / Codex — R001 人物像静止
+- 起始 commit：`8ca9f7ad786bf27cc6e6230c186e6a549deb59a9`；同一 `codex/pilot-v1` 分支与 Draft PR #1，结果提交见此轮 PR head。
+- 用户直接反馈：人物感觉没有动。查证旧版头/胸最大 XY 位移投影估算约 0.62/0.91 px；真实试听 1.35 s 时到 frame 81 / S02，确实保持 S01 尾帧（不是播放器未推进）。
+- 修改：只调整 S01，肩胸起伏约 3.44 px、头部俯仰约 4.03 px、双臂约 6.2 px；腿脚固定、字符 ID/seed/镜头时长不变。以上为 960×540、固定相机参数的换算估计，未夸大为实际逐像素或跨硬件保证。
+- 新增“循环看 S01”无声短段预览，反复 0–71 后回首帧；停止/手动跳帧/`renderFrame`/试听互斥，不影响按帧离线复现。没有用它假装实现 S02–S08。
+- 实际测试：`pnpm test` 39 PASS（含运动幅度与固定腿脚）；`pnpm build` PASS（543 kB chunk 提示保留）；构建预览 `render_keyframes.mjs` 62/62 PASS；`check_preview.mjs` 12/12 PASS；`check_motion_preview.mjs` 16/16 PASS。均用系统 Edge / Playwright；播放测试静音。
+- 本轮浏览器命令：`$env:PILOT_BROWSER_CHANNEL='msedge'; $env:PILOT_URL='http://127.0.0.1:4173'; $env:PILOT_OUTPUT_DIR='reviews/t01-motion'` 后分别执行 `node scripts/render_keyframes.mjs`、`node scripts/check_preview.mjs`、`node scripts/check_motion_preview.mjs`。
+- 位移记录：实际 Node + Playwright 调用旧 HEAD 快照和当前源码的 `sampleCharacterFrame`，逐一取 0–71 帧各字符 XY 范围，按固定相机 38°/10.9 距离/540 高换算；旧源码临时文件已删除，无帧序列提交。报告记录这是估算，不是音乐同步或艺术认可。
+- 产物：`reviews/t01-motion/` 中 baseline/revised-motion.json、3 实拍关键帧、workbench-loop.png、3 类浏览器报告与真实命令输出；上一轮 `reviews/t01/` 原文件保留。日志仅规范行尾空白。源码修改后的 Python 交接测试本轮未重跑，其配置与音频未修改。
+- 待审：是否现在能清楚感到肩胸/头/手动作、是否仍克制；短段循环返回首帧的回跳仅用于预览。R001 状态 ADDRESSED，等待用户/导演确认，不标 VERIFIED。
+- 下一步：复审 R001，再沿既有 NEXT 进入 T02；没有扩大到全曲、导出 MP4 或自动合并。
+
+## Round 3 / 持续制作 / Codex — T02 与八段动态初版
+- 起始 commit：`087ac361d39b78c67b36d3f5083d540a7eba0e9a`。工作仍在 `codex/pilot-v1` / Draft PR #1；代码、实拍与预览提交为 `b0be9d7dfe892692c1f66a19ebd9fd6b800538bf`，追加记录提交见PR head。实际执行时间取 `reviews/pilot-v2/export-report.json` 的 startedAt / completedAt。
+- 用户授权：R002“没有张力，继续生成下面的，要有张力，幅度要大”；旧等待审阅门槛已被此继续指令解除。不扩大到全曲，也没有把它当合并/公开授权。
+- 实际实现：S01肩胸/头/手约16/15/29px固定相机估算量级；S02收缩与向头侧护头，窗口真正靠近；S03双臂大幅推拒与文字墙；S04同1426 ID定向螺旋爆散（约9world跨度）与急推；S05原胸口64 ID核心/后台反讽；S06按部位错时回流、约6%低亮缺口/跨步z推进；S07半身压近、旧状态失效只保留ACTIVE主状态；S08持续余震/后撤露系统空间。
+- JSON唯一配置新增未校准事件：爆裂258，回流420–548；镜头边界0–899与音轨本地零偏移保持，beat/lyric verified仍false。帧姿态、字符、相机和环境完全由frame/seed重建；无前帧缓冲或实时音频分析依赖。
+- 实际检查：`pnpm build` PASS（约552 kB chunk默认提示）；`pnpm test` 3文件/65 tests PASS；`python -m unittest discover -s tests -v` 13 tests OK；`node scripts/review_pilot.mjs` 122/122 PASS、24 actual PNG。首轮服务端口已结束导致一次ERR_CONNECTION_REFUSED，重启本地preview后重跑通过，未将那次失败写成通过。
+- 实拍后局部修正：S02举手姿态改为双臂向头侧收拢并更早压低；S07旧UNSTABLE等表面面板提前失效，不抢ACTIVE。修正后再次构建、65单测与122浏览器检查通过。源代码冻结后导出最终视频。
+- 视频命令：`$env:PILOT_FFMPEG='<本地FFmpeg可执行文件>'; $env:PILOT_BROWSER_CHANNEL='msedge'; $env:PILOT_URL='http://127.0.0.1:4173'; node scripts/export_pilot.mjs --overwrite`。仅替换本项目已生成的预览文件，未覆盖其他项目或Git历史。
+- 实际导出：900帧逐一await renderFrame、PNG流到FFmpeg，不是实时录屏；`reviews/pilot-v2/preview-960x540.mp4`。960×540/60fps/15.00s/H264 High/yuv420p，AAC 48k双声道约321kbps；900完整解码/PTS0–899/timebase1/60/900不同帧/无相邻重复，AAC完整解码通过。第一次预览已成功；最后护头修正后重新生成并再次完整验证，报告对应最终源码hash。
+- FFmpeg为项目外局部工具：PyPI imageio-ffmpeg0.6.0 Windows wheel的下载SHA256已核验，FFmpeg7.1/libx264实际可用；未全局安装/修改系统或上传FFmpeg/依赖目录。
+- 产物位置：`reviews/pilot-v2/` 内24关键帧、browser-report.json、export-report.json、preview MP4、FFmpeg全解码日志/framemd5、构建/单测/交接真实输出。未保存或提交900张渲染帧序列。上轮历史产物保持原路径。
+- 三个重点审阅：S04 240/285/329的蓄压到爆裂；S06 420/495/569的同ID回流/冲出；S07 639与S08 804/899的近景张力/余震后撤。全文索引见reviews/pilot-v2/README.md。
+- 未完成：导演张力验收、腿部步态/文字密度等精修、听审/歌词鼓点精校、1080p60正式母版。测试和全解码不等于美学通过；没有外部模型意见或公开发布。
+- 下一步：直接审阅实际带音乐预览，按R002给镜头/帧范围内最小反馈，再做校准与正式导出；不重新编写整份方案。
+- 远端核验：`b0be9d7dfe892692c1f66a19ebd9fd6b800538bf` 已推送并与远端分支/PR head一致；仓库仍private=true，PR #1为OPEN/Draft。远端MP4 blob与本地Git对象完全一致，size=12,401,635 bytes。实际PR：https://github.com/958639806/inochi-ascii-mv/pull/1 。

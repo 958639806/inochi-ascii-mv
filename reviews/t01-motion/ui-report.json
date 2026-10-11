@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "startedAt": "2026-10-10T11:35:28.763Z",
+  "completedAt": "2026-10-10T11:35:31.286Z",
+  "url": "http://127.0.0.1:4173",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "channel": "msedge",
+    "headless": true,
+    "muteAudio": true,
+    "playwright": "1.64.0",
+    "browserVersion": "154.0.4258.62"
+  },
+  "checks": [
+    {
+      "name": "local preview page loads",
+      "passed": true,
+      "details": {
+        "httpStatus": 200
+      }
+    },
+    {
+      "name": "keyframe 036 button seeks to frame 36 in S01",
+      "passed": true,
+      "details": {
+        "frameInput": 36,
+        "frameCount": "036 / 899",
+        "shotHeading": "S01 / 压抑建立",
+        "implementation": "S01 动作修订 · 视觉待导演审阅",
+        "errorVisible": false,
+        "errorText": "",
+        "audio": {
+          "currentTime": 0.6,
+          "duration": null,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 0,
+          "networkState": 1,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "S02 navigation seeks to 72 and states it is unimplemented",
+      "passed": true,
+      "details": {
+        "frameInput": 72,
+        "frameCount": "072 / 899",
+        "shotHeading": "S02 / 语言围困",
+        "implementation": "S02 待实现 · 当前画面为 S01 尾帧",
+        "errorVisible": false,
+        "errorText": "",
+        "audio": {
+          "currentTime": 1.2,
+          "duration": null,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 0,
+          "networkState": 1,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "invalid frame 900 reports an error and leaves rendered state unchanged",
+      "passed": true,
+      "details": {
+        "frameInput": 900,
+        "frameCount": "072 / 899",
+        "shotHeading": "S02 / 语言围困",
+        "implementation": "S02 待实现 · 当前画面为 S01 尾帧",
+        "errorVisible": true,
+        "errorText": "Output frame must be an integer from 0 to 899; received 900.",
+        "audio": {
+          "currentTime": 1.2,
+          "duration": null,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 0,
+          "networkState": 1,
+          "error": null
+        },
+        "beforeCanvasSha256": "34c900a54d194e7292c09cb2203551fe8f48603c147a9d98746aa23914f6a456",
+        "afterCanvasSha256": "34c900a54d194e7292c09cb2203551fe8f48603c147a9d98746aa23914f6a456"
+      }
+    },
+    {
+      "name": "recover to frame 0 and local audio zero before playback",
+      "passed": true,
+      "details": {
+        "frameInput": 0,
+        "frameCount": "000 / 899",
+        "shotHeading": "S01 / 压抑建立",
+        "implementation": "S01 动作修订 · 视觉待导演审阅",
+        "errorVisible": false,
+        "errorText": "Output frame must be an integer from 0 to 899; received 900.",
+        "audio": {
+          "currentTime": 0,
+          "duration": null,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 0,
+          "networkState": 1,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "local audio advances during preview",
+      "passed": true,
+      "details": {
+        "frameInput": 9,
+        "frameCount": "009 / 899",
+        "shotHeading": "S01 / 压抑建立",
+        "implementation": "S01 动作修订 · 视觉待导演审阅",
+        "errorVisible": false,
+        "errorText": "Output frame must be an integer from 0 to 899; received 900.",
+        "audio": {
+          "currentTime": 0.158586,
+          "duration": 15,
+          "paused": false,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 4,
+          "networkState": 1,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "audio is the local 15-second pre-cut FLAC without another 58-second offset",
+      "passed": true,
+      "details": {
+        "audio": {
+          "currentTime": 0.158586,
+          "duration": 15,
+          "paused": false,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 4,
+          "networkState": 1,
+          "error": null
+        },
+        "configuredAudio": {
+          "path": "assets/audio/pilot_058-073.flac",
+          "source_start_seconds": 58,
+          "source_end_seconds_exclusive": 73,
+          "playback_offset_seconds": 0,
+          "sample_rate_hz": 48000,
+          "sample_count_per_channel": 720000
+        }
+      }
+    },
+    {
+      "name": "pause leaves a frame within 2 of the audio clock",
+      "passed": true,
+      "details": {
+        "frameInput": 10,
+        "frameCount": "010 / 899",
+        "shotHeading": "S01 / 压抑建立",
+        "implementation": "S01 动作修订 · 视觉待导演审阅",
+        "errorVisible": false,
+        "errorText": "Output frame must be an integer from 0 to 899; received 900.",
+        "audio": {
+          "currentTime": 0.178842,
+          "duration": 15,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 4,
+          "networkState": 1,
+          "error": null
+        },
+        "expectedFrame": 10
+      }
+    },
+    {
+      "name": "offline renderFrame 36 pauses playback and selects exactly 36",
+      "passed": true,
+      "details": {
+        "frameInput": 36,
+        "frameCount": "036 / 899",
+        "shotHeading": "S01 / 压抑建立",
+        "implementation": "S01 动作修订 · 视觉待导演审阅",
+        "errorVisible": false,
+        "errorText": "Output frame must be an integer from 0 to 899; received 900.",
+        "audio": {
+          "currentTime": 0.178842,
+          "duration": 15,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 4,
+          "networkState": 1,
+          "error": null
+        },
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -1.0186234712600708,
+              -2.181666612625122,
+              -0.24368472397327423
+            ],
+            "max": [
+              1.0087890625,
+              1.6843613386154175,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        }
+      }
+    },
+    {
+      "name": "audio decoder has no error",
+      "passed": true,
+      "details": {
+        "audio": {
+          "currentTime": 0.178842,
+          "duration": 15,
+          "paused": true,
+          "ended": false,
+          "src": "http://127.0.0.1:4173/assets/pilot_058-073-BFb5dto9.flac",
+          "readyState": 4,
+          "networkState": 1,
+          "error": null
+        },
+        "events": [
+          {
+            "type": "waiting",
+            "currentTime": 0,
+            "paused": false,
+            "error": null
+          },
+          {
+            "type": "loadedmetadata",
+            "currentTime": 0,
+            "paused": false,
+            "error": null
+          },
+          {
+            "type": "playing",
+            "currentTime": 0,
+            "paused": false,
+            "error": null
+          },
+          {
+            "type": "pause",
+            "currentTime": 0.178842,
+            "paused": true,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "no unhandled JavaScript page errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no unexpected network failures",
+      "passed": true,
+      "details": {
+        "unexpectedFailures": []
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleObservations": [],
+  "requestFailures": [],
+  "audioEvents": [
+    {
+      "type": "waiting",
+      "currentTime": 0,
+      "paused": false,
+      "error": null
+    },
+    {
+      "type": "loadedmetadata",
+      "currentTime": 0,
+      "paused": false,
+      "error": null
+    },
+    {
+      "type": "playing",
+      "currentTime": 0,
+      "paused": false,
+      "error": null
+    },
+    {
+      "type": "pause",
+      "currentTime": 0.178842,
+      "paused": true,
+      "error": null
+    }
+  ],
+  "fatalErrors": [],
+  "limitations": [
+    "Playwright ran with --mute-audio; no human listening review was performed.",
+    "This checks browser playback and frame controls only; lyric, beat, and artistic synchronization remain unverified.",
+    "FLAC ERR_ABORTED observations can represent normal range-request cancellation; audio.error and actual playback are checked separately."
+  ]
+}

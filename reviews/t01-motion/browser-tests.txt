@@ -1,0 +1,2 @@
+PASS: 62/62 browser checks; 3 actual canvas PNGs.
+Report: reviews/t01-motion/browser-report.json

@@ -2,5 +2,11 @@
 *.md text eol=lf
 *.json text eol=lf
 *.py text eol=lf
+*.ts text eol=lf
+*.mjs text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.txt text eol=lf
 *.flac binary
 *.png binary

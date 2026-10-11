@@ -1,0 +1,2 @@
+PASS: 16/16 loop UI checks.
+Report: reviews/t01-motion/motion-ui-report.json; motion quality and listening remain pending review.

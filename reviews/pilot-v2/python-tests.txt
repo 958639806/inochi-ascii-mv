@@ -1,0 +1,20 @@
+test_900_is_not_an_output_frame (test_handoff.HandoffTests.test_900_is_not_an_output_frame) ... ok
+test_audio_exact_streaminfo (test_handoff.HandoffTests.test_audio_exact_streaminfo) ... ok
+test_audio_not_trimmed_twice (test_handoff.HandoffTests.test_audio_not_trimmed_twice) ... ok
+test_contiguous_timeline (test_handoff.HandoffTests.test_contiguous_timeline) ... ok
+test_every_frame_has_one_shot (test_handoff.HandoffTests.test_every_frame_has_one_shot) ... ok
+test_expected_private_accepted (test_handoff.HandoffTests.test_expected_private_accepted) ... ok
+test_local_mode_does_not_call_remote (test_handoff.HandoffTests.test_local_mode_does_not_call_remote) ... ok
+test_no_claimed_model_reviews (test_handoff.HandoffTests.test_no_claimed_model_reviews) ... ok
+test_preview_keeps_frame_rate (test_handoff.HandoffTests.test_preview_keeps_frame_rate) ... ok
+test_public_repository_rejected (test_handoff.HandoffTests.test_public_repository_rejected) ... ok
+test_string_true_rejected (test_handoff.HandoffTests.test_string_true_rejected) ... ok
+test_unsafe_paths_rejected (test_handoff.HandoffTests.test_unsafe_paths_rejected) ... ok
+test_wrong_repository_rejected (test_handoff.HandoffTests.test_wrong_repository_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.007s
+
+OK
+Local handoff check passed (1 files). No remote operation performed.
+Target: 958639806/inochi-ascii-mv; private only. Run with --publish in an authenticated gh environment.

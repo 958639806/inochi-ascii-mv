@@ -1,0 +1,55 @@
+{
+  "basis": "fixed camera projection estimate; no camera motion",
+  "frames": [
+    0,
+    71
+  ],
+  "pixelsPerWorldUnit": 71.9391685295846,
+  "parts": {
+    "head": {
+      "maxXWorld": 0.0017320215702056885,
+      "maxYWorld": 0.008444547653198242,
+      "maxEstimatedPixelSpan": 0.6201401841374808
+    },
+    "neck": {
+      "maxXWorld": 0.0017320066690444946,
+      "maxYWorld": 0.008444547653198242,
+      "maxEstimatedPixelSpan": 0.6201399687539111
+    },
+    "torso": {
+      "maxXWorld": 0.005714118480682373,
+      "maxYWorld": 0.011224180459976196,
+      "maxEstimatedPixelSpan": 0.9060719770563389
+    },
+    "arm-left": {
+      "maxXWorld": 0.010938167572021484,
+      "maxYWorld": 0.011521220207214355,
+      "maxEstimatedPixelSpan": 1.141450076979343
+    },
+    "arm-right": {
+      "maxXWorld": 0.0107002854347229,
+      "maxYWorld": 0.011497408151626587,
+      "maxEstimatedPixelSpan": 1.1298950547257005
+    },
+    "leg-left": {
+      "maxXWorld": 0,
+      "maxYWorld": 0,
+      "maxEstimatedPixelSpan": 0
+    },
+    "leg-right": {
+      "maxXWorld": 0,
+      "maxYWorld": 0,
+      "maxEstimatedPixelSpan": 0
+    },
+    "foot-left": {
+      "maxXWorld": 0,
+      "maxYWorld": 0,
+      "maxEstimatedPixelSpan": 0
+    },
+    "foot-right": {
+      "maxXWorld": 0,
+      "maxYWorld": 0,
+      "maxEstimatedPixelSpan": 0
+    }
+  }
+}

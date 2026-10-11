@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "startedAt": "2026-10-10T11:35:28.777Z",
+  "completedAt": "2026-10-10T11:35:33.645Z",
+  "url": "http://127.0.0.1:4173",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "channel": "msedge",
+    "headless": true,
+    "muteAudio": true,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "playwright": "1.64.0",
+    "browserVersion": "154.0.4258.62"
+  },
+  "checks": [
+    {
+      "name": "local preview loads",
+      "passed": true,
+      "details": {
+        "httpStatus": 200
+      }
+    },
+    {
+      "name": "S01 loop button is enabled and clearly labeled",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "all loop samples stay inside S01 frames 0 through 71",
+      "passed": true,
+      "details": {
+        "samples": [
+          {
+            "observedAtMs": 558.5,
+            "frame": 1,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 767.0999999940395,
+            "frame": 14,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 983,
+            "frame": 27,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 1195.7999999821186,
+            "frame": 39,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 1409.7999999821186,
+            "frame": 52,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 1622.5999999940395,
+            "frame": 65,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 1831,
+            "frame": 6,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 2034.5,
+            "frame": 18,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 2243.199999988079,
+            "frame": 31,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          },
+          {
+            "observedAtMs": 2448.5999999940395,
+            "frame": 43,
+            "shotHeading": "S01 / 压抑建立",
+            "loopButton": "停止循环",
+            "playButton": "试听预览",
+            "audio": {
+              "currentTime": 0,
+              "paused": true,
+              "duration": null,
+              "error": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "loop frame values change across real time samples",
+      "passed": true,
+      "details": {
+        "distinctFrames": [
+          1,
+          14,
+          27,
+          39,
+          52,
+          65,
+          6,
+          18,
+          31,
+          43
+        ]
+      }
+    },
+    {
+      "name": "S01 loop wraps back to an earlier frame",
+      "passed": true,
+      "details": {
+        "observedWraps": 1
+      }
+    },
+    {
+      "name": "silent loop pauses audio and does not advance its clock",
+      "passed": true,
+      "details": {
+        "beforeAudio": {
+          "currentTime": 0,
+          "paused": true,
+          "duration": null,
+          "error": null
+        },
+        "sampledAudio": [
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          },
+          {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "renderFrame 36 stops the loop and selects exactly 36",
+      "passed": true,
+      "details": {
+        "snapshot": {
+          "characterCount": 1426,
+          "characterIdHash": "149d2e90",
+          "finite": true,
+          "renderer": "ANGLE (AMD, AMD Radeon 780M Graphics (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "cameraPosition": [
+            0.06,
+            0.22,
+            10.84
+          ],
+          "bounds": {
+            "min": [
+              -1.0186234712600708,
+              -2.181666612625122,
+              -0.24368472397327423
+            ],
+            "max": [
+              1.0087890625,
+              1.6843613386154175,
+              0.3745584487915039
+            ]
+          },
+          "frame": 36,
+          "localSeconds": 0.6,
+          "sourceSeconds": 58.6,
+          "shotId": "S01",
+          "implemented": true
+        },
+        "state": {
+          "observedAtMs": 2504.9000000059605,
+          "frame": 36,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "offline frame 36 remains stable after 150ms",
+      "passed": true,
+      "details": {
+        "before": {
+          "observedAtMs": 2504.9000000059605,
+          "frame": 36,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        },
+        "after": {
+          "observedAtMs": 2659,
+          "frame": 36,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "manual seek stops the loop and holds frame 24",
+      "passed": true,
+      "details": {
+        "before": {
+          "observedAtMs": 2686.9000000059605,
+          "frame": 24,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.4,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        },
+        "after": {
+          "observedAtMs": 2844,
+          "frame": 24,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.4,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "stop-loop button halts frame and audio advance",
+      "passed": true,
+      "details": {
+        "before": {
+          "observedAtMs": 3094.9000000059605,
+          "frame": 13,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.4,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        },
+        "after": {
+          "observedAtMs": 3260.199999988079,
+          "frame": 13,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.4,
+            "paused": true,
+            "duration": null,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "audio preview stops the silent loop",
+      "passed": true,
+      "details": {
+        "observedAtMs": 3354.199999988079,
+        "frame": 0,
+        "shotHeading": "S01 / 压抑建立",
+        "loopButton": "循环看 S01",
+        "playButton": "暂停试听",
+        "audio": {
+          "currentTime": 0,
+          "paused": false,
+          "duration": 15,
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "audio clock advances in listening preview mode",
+      "passed": true,
+      "details": {
+        "before": {
+          "observedAtMs": 3354.199999988079,
+          "frame": 0,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "暂停试听",
+          "audio": {
+            "currentTime": 0,
+            "paused": false,
+            "duration": 15,
+            "error": null
+          }
+        },
+        "after": {
+          "observedAtMs": 3554.199999988079,
+          "frame": 9,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "暂停试听",
+          "audio": {
+            "currentTime": 0.156305,
+            "paused": false,
+            "duration": 15,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "pause halts frame and audio advance",
+      "passed": true,
+      "details": {
+        "before": {
+          "observedAtMs": 3577.7999999821186,
+          "frame": 10,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.177765,
+            "paused": true,
+            "duration": 15,
+            "error": null
+          }
+        },
+        "after": {
+          "observedAtMs": 3736.5999999940395,
+          "frame": 10,
+          "shotHeading": "S01 / 压抑建立",
+          "loopButton": "循环看 S01",
+          "playButton": "试听预览",
+          "audio": {
+            "currentTime": 0.177765,
+            "paused": true,
+            "duration": 15,
+            "error": null
+          }
+        }
+      }
+    },
+    {
+      "name": "audio decoder reports no error",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "no unhandled JavaScript page errors",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "no unexpected failed browser requests",
+      "passed": true,
+      "details": {
+        "unexpected": []
+      }
+    }
+  ],
+  "loopSamples": [
+    {
+      "observedAtMs": 558.5,
+      "frame": 1,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 767.0999999940395,
+      "frame": 14,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 983,
+      "frame": 27,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 1195.7999999821186,
+      "frame": 39,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 1409.7999999821186,
+      "frame": 52,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 1622.5999999940395,
+      "frame": 65,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 1831,
+      "frame": 6,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 2034.5,
+      "frame": 18,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 2243.199999988079,
+      "frame": 31,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    },
+    {
+      "observedAtMs": 2448.5999999940395,
+      "frame": 43,
+      "shotHeading": "S01 / 压抑建立",
+      "loopButton": "停止循环",
+      "playButton": "试听预览",
+      "audio": {
+        "currentTime": 0,
+        "paused": true,
+        "duration": null,
+        "error": null
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleObservations": [],
+  "requestFailures": [],
+  "artifacts": [
+    {
+      "file": "reviews/t01-motion/workbench-loop.png",
+      "kind": "workbench UI screenshot",
+      "purpose": "Loop button placement only; not an animation keyframe."
+    }
+  ],
+  "fatalErrors": [],
+  "limitations": [
+    "Frame samples test loop scheduling and control behavior, not artistic acceptance or perceptual motion quality.",
+    "The single workbench screenshot shows button placement; it is not an exported animation keyframe.",
+    "Browser audio is muted; no human listening review, lyric alignment, or beat alignment was performed.",
+    "Offline renderFrame remains frame-driven; wall-clock sampling is used only to observe live preview controls."
+  ]
+}

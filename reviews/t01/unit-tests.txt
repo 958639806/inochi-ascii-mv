@@ -1,0 +1,48 @@
+? Verifying lockfile against supply-chain policies (93 entries)...
+Lockfile is up to date, resolution step is skipped
+Already up to date
+[WARN] GET https://registry.npmjs.org/@rolldown%2Fbinding-win32-arm64-msvc error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] Request took 12042ms: https://registry.npmjs.org/typescript
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-sunos-x64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] Request took 15936ms: https://registry.npmjs.org/@rolldown%2Fbinding-win32-arm64-msvc
+[WARN] Request took 15445ms: https://registry.npmjs.org/playwright
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-linux-riscv64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-linux-x64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@types%2Festree error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@rolldown%2Fbinding-android-arm64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-darwin-arm64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@rolldown%2Fbinding-darwin-x64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@rolldown%2Fbinding-freebsd-x64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-linux-mips64el error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-aix-ppc64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@types%2Fdeep-eql error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-netbsd-x64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-linux-loong64 error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+[WARN] Request took 25400ms: https://registry.npmjs.org/@typescript%2Ftypescript-sunos-x64
+[WARN] Request took 29526ms: https://registry.npmjs.org/@typescript%2Ftypescript-linux-riscv64
+[WARN] Request took 29575ms: https://registry.npmjs.org/@typescript%2Ftypescript-linux-x64
+[WARN] Request took 29614ms: https://registry.npmjs.org/@typescript%2Ftypescript-aix-ppc64
+[WARN] Request took 29612ms: https://registry.npmjs.org/@typescript%2Ftypescript-linux-mips64el
+[WARN] Request took 29627ms: https://registry.npmjs.org/@typescript%2Ftypescript-netbsd-x64
+[WARN] Request took 29678ms: https://registry.npmjs.org/@typescript%2Ftypescript-darwin-arm64
+[WARN] Request took 29694ms: https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf
+[WARN] Request took 29836ms: https://registry.npmjs.org/@rolldown%2Fbinding-android-arm64
+[WARN] Request took 30210ms: https://registry.npmjs.org/@rolldown%2Fbinding-freebsd-x64
+[WARN] Request took 30895ms: https://registry.npmjs.org/@rolldown%2Fbinding-darwin-x64
+[WARN] Request took 31055ms: https://registry.npmjs.org/@typescript%2Ftypescript-linux-loong64
+[WARN] GET https://registry.npmjs.org/@typescript%2Ftypescript-linux-s390x error (23). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@dimforge%2Frapier3d-compat error (23). Will retry in 10 seconds. 2 retries left.
+[WARN] Request took 70357ms: https://registry.npmjs.org/@typescript%2Ftypescript-linux-s390x
+✓ Lockfile passes supply-chain policies (93 entries in 1m 10.6s)
+
+Done in 1m 11.1s using pnpm v11.25.0
+$ vitest run
+
+ RUN  v5.0.3 C:/Users/95863/Documents/Codex/2026-10-10/start-here-md-github-python-scripts/inochi-ascii-mv
+
+
+ Test Files  2 passed (2)
+      Tests  38 passed (38)
+   Start at  19:12:21
+   Duration  275ms (tests 35%, import 34%, transform 29%, worker 3%)
